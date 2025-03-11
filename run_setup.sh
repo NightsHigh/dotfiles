@@ -40,6 +40,8 @@ install_system() {
 install_nvidia() {
     echo "Installing nvidia drivers"
     bash "$SCRIPT_DIR/setup/tools/install_packages.sh" pacman "$SCRIPT_DIR/setup/packages/nvidia_packages.txt"
+    bash "$SCRIPT_DIR/setup/tools/configure_nvidia.sh"
+
 }
 
 # Function to ask a yes/no question and return the answer as a boolean
