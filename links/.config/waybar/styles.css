@@ -1,0 +1,241 @@
+/* Import color definitions */
+@import "colors-waybar.css";
+
+/* Define colors */
+@define-color bg @color0;
+@define-color fg @color15;
+@define-color accent @color1;
+@define-color warning @color3;
+
+/* Reset styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset styles for buttons */
+button {
+  all: initial;
+}
+
+/* Global styles */
+* {
+  font-family: FiraCode, FontAwesome6Free;
+  font-weight: 500;
+  font-size: 14px;
+  color: @fg;
+}
+
+/* GTK Menu styles */
+menu,
+menuitem,
+popup,
+context-menu {
+  background-color: @bg;
+  color: @fg;
+}
+/* Menu item interaction states */
+menuitem:hover,
+menuitem:checked,
+menuitem:active {
+  background-color: @accent;
+}
+
+/* Waybar styles */
+window#waybar {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+/* Modules styles */
+.modules-left,
+.modules-right,
+.modules-center {
+  background-color: @bg;
+  margin: 0;
+}
+
+.modules-left {
+  border-radius: 4px 4px 15px 15px;
+  padding: 0px 4px;
+  border: 0.5px solid @fg;
+}
+
+.modules-right {
+  border-radius: 4px 0 15px 15px;
+  padding: 0px 4px;
+  border: 0.5px solid @fg;
+}
+
+.modules-center {
+  border-radius: 4px 4px 15px 15px;
+  padding: 0px 4px;
+  border: 0.5px solid @fg;
+}
+
+/* Tooltips */
+tooltip {
+  border: 2px solid @accent;
+  background: @bg;
+  border-radius: 10px;
+}
+
+/* Workspaces */
+
+#workspaces button {
+  padding: 0px 6px;
+  margin: 4px 0px;
+}
+
+#workspaces button:first-child {
+  border-radius: 4px 0 0 15px;
+}
+#workspaces button:last-child {
+  border-radius: 0 4px 15px 0;
+}
+
+#workspaces button:only-child:first-child {
+  border-radius: 4px 4px 15px 15px;
+}
+
+#workspaces button.active {
+  border-bottom: 3px solid @accent;
+  margin: 4px 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+#workspaces button.focused {
+  color: @accent;
+}
+
+#workspaces button.urgent {
+  color: @warning;
+}
+
+#workspaces button:hover {
+  background: @accent;
+  margin: 4px 0px;
+}
+
+/* Taskbar */
+#taskbar {
+  background: transparent;
+}
+
+#taskbar button {
+  padding: 0px 8px;
+  margin: 4px 0px;
+}
+
+#taskbar button:first-child {
+  border-radius: 4px 0 0 15px;
+}
+
+#taskbar button:last-child {
+  border-radius: 0 4px 15px 0;
+}
+
+#taskbar button:only-child:first-child {
+  border-radius: 4px 4px 15px 15px;
+}
+
+#taskbar button.active {
+  border-bottom: 3px solid @accent;
+  margin: 4px 0px;
+}
+
+#taskbar button:hover {
+  background-color: @accent;
+  margin: 4px 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+#taskbar.empty {
+  background: transparent;
+  background-color: transparent;
+}
+
+/* Individual modules */
+#clock,
+#window,
+#temperature,
+#cpu,
+#memory,
+#disk,
+#custom-hardware-icon,
+#custom-applauncher,
+#custom-nightmode,
+#custom-wallpaper,
+#custom-exit,
+#custom-clipboard,
+#custom-mission-center,
+#backlight,
+#custom-notification-center,
+#wireplumber,
+#battery {
+  color: @fg;
+  padding: 0px 4px;
+  margin: 4px 2px;
+}
+
+#clock {
+  margin: 4px 0px;
+}
+
+#tray-group {
+  border: 1px solid @accent;
+  border-radius: 15px;
+  font-weight: normal;
+  padding: 0px 5px;
+  margin: 5px 0px;
+}
+
+#tray {
+  border: 1px solid @accent;
+  border-radius: 15px;
+  font-weight: normal;
+  padding: 8px 4px;
+  margin: 2px 0px;
+}
+
+#tray > .active:hover {
+  background-color: @accent;
+  border-radius: 10px;
+  border: 0px solid @fg;
+}
+
+#tray > .active {
+  border: 0.5px solid @fg;
+  border-radius: 10px;
+}
+
+#tray > .passive {
+  background-color: @accent;
+}
+
+#tray > .needs-attention {
+  background-color: @warning;
+}
+
+/* Hide window module when not focused */
+window#waybar.empty #window {
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#wireplumber:hover,
+#custom-hardware-icon:hover,
+#custom-applauncher:hover,
+#custom-nightmode:hover,
+#custom-wallpaper:hover,
+#custom-exit:hover,
+#custom-notification-center:hover,
+#custom-clipboard:hover,
+#custom-mission-center:hover,
+#backlight:hover {
+  background-color: @accent;
+  margin: 4px 2px;
+  border-radius: 7px;
+}

@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/klintoe/.config/wpg/wallpapers/night-sky-colorful-beautiful-clouds-mountain-valley-digital-art.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#010002",
+        "foreground": "#d7d4d6",
+        "cursor": "#d7d4d6"
+    },
+    "colors": {
+        "color0": "#010002",
+        "color1": "#B13D49",
+        "color2": "#E99A71",
+        "color3": "#136692",
+        "color4": "#4D4CA5",
+        "color5": "#BE46B2",
+        "color6": "#2CB0BF",
+        "color7": "#d7d4d6",
+        "color8": "#969495",
+        "color9": "#B13D49",
+        "color10": "#E99A71",
+        "color11": "#136692",
+        "color12": "#4D4CA5",
+        "color13": "#BE46B2",
+        "color14": "#2CB0BF",
+        "color15": "#d7d4d6"
+    }
+}

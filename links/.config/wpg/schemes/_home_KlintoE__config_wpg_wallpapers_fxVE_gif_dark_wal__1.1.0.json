@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/KlintoE/.config/wpg/wallpapers/fxVE.gif",
+    "alpha": "100",
+
+    "special": {
+        "background": "#020105",
+        "foreground": "#f5c6f2",
+        "cursor": "#f5c6f2"
+    },
+    "colors": {
+        "color0": "#020105",
+        "color1": "#4649C2",
+        "color2": "#B22CB9",
+        "color3": "#ED29DB",
+        "color4": "#EE61EC",
+        "color5": "#4A8FF4",
+        "color6": "#9B94FC",
+        "color7": "#f5c6f2",
+        "color8": "#ab8aa9",
+        "color9": "#4649C2",
+        "color10": "#B22CB9",
+        "color11": "#ED29DB",
+        "color12": "#EE61EC",
+        "color13": "#4A8FF4",
+        "color14": "#9B94FC",
+        "color15": "#f5c6f2"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/KlintoE/.config/wpg/wallpapers/pexels-francesco-ungaro-1525041.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#02140C",
+        "foreground": "#c9e9e7",
+        "cursor": "#c9e9e7"
+    },
+    "colors": {
+        "color0": "#02140C",
+        "color1": "#07768B",
+        "color2": "#5C7A85",
+        "color3": "#688E95",
+        "color4": "#4AD1D7",
+        "color5": "#9AA09F",
+        "color6": "#C1C1AF",
+        "color7": "#c9e9e7",
+        "color8": "#8ca3a1",
+        "color9": "#07768B",
+        "color10": "#5C7A85",
+        "color11": "#688E95",
+        "color12": "#4AD1D7",
+        "color13": "#9AA09F",
+        "color14": "#C1C1AF",
+        "color15": "#c9e9e7"
+    }
+}
