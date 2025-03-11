@@ -62,3 +62,4 @@ mpd
 starship
 eza
 librewolf
+stow
