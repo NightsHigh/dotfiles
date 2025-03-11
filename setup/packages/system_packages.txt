@@ -6,6 +6,7 @@ hyprpolkitagent-git
 hyprsunset-git
 hyprlock-git
 hypridle-git
+wlogout
 xdg-desktop-portal-hyprland-git
 qt5-wayland
 qt6-wayland
@@ -61,7 +62,6 @@ zsh
 mpd
 starship
 eza
-librewolf-bin
 stow
 networkmanager
 dhcpcd
