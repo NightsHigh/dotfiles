@@ -91,8 +91,10 @@ fi
 
 install_system
 
+bash "$SCRIPT_DIR/setup/applications/betterdiscord.sh"
 bash "$SCRIPT_DIR/setup/tools/clean_dotfiles.sh"
 bash "$SCRIPT_DIR/setup/tools/link_dotfiles.sh"
+
 
 
 echo "All done! Your system is now configured."
