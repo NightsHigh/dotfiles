@@ -43,7 +43,7 @@ install_nvidia() {
     bash "$SCRIPT_DIR/setup/system/configure_nvidia.sh"
 }
 
-install_media() {
+install_media_tools() {
     echo "Installing basic tools (VLC, Discord etc)"
     bash "$SCRIPT_DIR/setup/tools/install_packages.sh" pacman "$SCRIPT_DIR/setup/packages/basic_tools.txt"    
     bash "$SCRIPT_DIR/setup/applications/betterdiscord.sh"
@@ -69,6 +69,7 @@ if ask_boolean_question "Do you have an nvidia graphics card?"; then nvidia_driv
 if ask_boolean_question "Do you want to install development tools?"; then dev_tools=0; else dev_tools=1; fi
 if ask_boolean_question "Do you want to prepare your system for gaming?"; then gaming_tools=0; else gaming_tools=1; fi
 if ask_boolean_question "Do you want to install media tools?"; then media_tools=0; else media_tools=1; fi
+
 # Update system and install basic packages (needed for other scripts)
 echo "Updating system and installing essential packages..."
 sudo pacman -Syu --noconfirm > /dev/null 2>&1 || echo "Error: Failedf to synchronize pacman"  # Update package database
@@ -94,6 +95,10 @@ fi
 
 if [ "$gaming_tools" -eq 0 ]; then
     install_gaming_tools
+fi
+
+if [ "$media_tools" -eq 0 ]; then
+    install_media_tools
 fi
 
 install_system
