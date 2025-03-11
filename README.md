@@ -16,14 +16,12 @@ Follow these steps to set up your desktop environment:
 2. Add Nvidia environment settings if you have an Nvidia graphics card, or skip this step if you do not.
 
 
-
-
-### Step 3: Display Settings
+### Step 3: Run installation script
 1. Locate dotfiles with `cd ~/dotfiles`
 2. Give execution permission `chmod +x run_setup.sh` 
-3. Execute script `run_setup.sh`
-### Step 3: Configure Hyprland Environment
-
+3. Execute script `run_setup.sh
+   `
+### Step 3: Configure display
 
 1. Open `Display Settings` with the app launcher. 
 2. Ensure the scale is set to 1.
@@ -33,7 +31,7 @@ Follow these steps to set up your desktop environment:
 
 1. Press the gallery icon in the bar at the right corner to set the background.
 
-### Step 5: Add hyprpm plugin
+### Step 5: Add hyprpm plugin - if hyprland plugin system fail
 
 Should be automatic else:
 
