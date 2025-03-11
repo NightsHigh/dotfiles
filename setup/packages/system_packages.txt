@@ -63,5 +63,6 @@ mpd
 starship
 eza
 stow
-networkmanager
 dhcpcd
+networkmanager
+network-manager-applet
