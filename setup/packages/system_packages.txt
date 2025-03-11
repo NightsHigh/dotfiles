@@ -63,3 +63,5 @@ starship
 eza
 librewolf-bin
 stow
+networkmanager
+dhcpcd

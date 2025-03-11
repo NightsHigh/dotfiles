@@ -40,7 +40,7 @@ install_system() {
 install_nvidia() {
     echo "Installing nvidia drivers"
     bash "$SCRIPT_DIR/setup/tools/install_packages.sh" pacman "$SCRIPT_DIR/setup/packages/nvidia_packages.txt"
-    bash "$SCRIPT_DIR/setup/tools/configure_nvidia.sh"
+    bash "$SCRIPT_DIR/setup/system/configure_nvidia.sh"
 
 }
 

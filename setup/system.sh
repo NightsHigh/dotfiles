@@ -4,6 +4,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 bash "$SCRIPT_DIR/tools/install_packages.sh" yay "$SCRIPT_DIR/packages/system_packages.txt"
 bash "$SCRIPT_DIR/applications/betterdiscord.sh"
+bash "$SCRIPT_DIR/system/network.sh"
 
 # add hyprland plugins
 hyprpm add https://github.com/hyprwm/hyprland-plugins
