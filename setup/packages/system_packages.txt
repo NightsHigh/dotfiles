@@ -61,5 +61,5 @@ zsh
 mpd
 starship
 eza
-librewolf
+librewolf-bin
 stow
