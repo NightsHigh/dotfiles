@@ -1,13 +1,27 @@
 #!/bin/bash
 
+# Path to this init.sh script
+INIT_SCRIPT="$HOME/dotfiles/githooks/init.sh"
+
+# Path to the git hooks directory
+HOOKS_DIR="$HOME/dotfiles/.git/hooks"
+POST_MERGE_HOOK="$HOOKS_DIR/post-merge"
+
 # Ensure the git hooks directory exists
-mkdir -p "$HOME/dotfiles/.git/hooks"
+mkdir -p "$HOOKS_DIR"
+
 
 bash "$HOME/dotfiles/githooks/ignore_local_changes.sh"
-# Copy the ignore_local_changes.sh script into the pre-push hook
-cp "$HOME/dotfiles/githooks/ignore_local_changes.sh" "$HOME/dotfiles/.git/hooks/pre-push"
 
-# Make the pre-push hook executable
-chmod +x "$HOME/dotfiles/.git/hooks/pre-push"
+cat > "$POST_MERGE_HOOK" <<EOL
+#!/bin/bash
 
-echo "Pre-push hook setup complete. Local changes will now be ignored automatically on push."
+# Call init.sh after pulling changes (i.e., after git pull)
+echo "Running init.sh after pull..."
+bash "$INIT_SCRIPT"
+EOL
+
+# Make the post-merge hook executable
+chmod +x "$POST_MERGE_HOOK"
+
+echo "Post-merge hook set up successfully. 'init.sh' will run after every pull."
