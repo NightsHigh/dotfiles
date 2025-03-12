@@ -83,7 +83,8 @@ Should be automatic else:
 - [x] Themed SwayNC
 - [x] Themed Wlogout
 - [x] Wallpaper bug fixed, can now change wallpaper while neovim is open
-- [ ] Update brightness ui in waybar to adapt Hyprsunset 
+- [ ] Update brightness ui in waybar to adapt Hyprsunset
+- [ ] Add custom login manager theme
 
 ## Requirement
 
