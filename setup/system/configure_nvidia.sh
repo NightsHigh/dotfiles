@@ -32,7 +32,7 @@ if [ ! -d "$HOOKS_DIR" ]; then
 fi
 
 # Copy the pacman hook file if it exists
-HOOK_FILE="$SCRIPT_DIR/nvidia/nvidia.hook"
+HOOK_FILE="$SCRIPT_DIR/nvidia.hook"
 if [ -f "$HOOK_FILE" ]; then
     sudo cp "$HOOK_FILE" "$HOOKS_DIR/nvidia.hook"
     echo "Pacman hook installed successfully."
