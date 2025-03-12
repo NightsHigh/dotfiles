@@ -86,7 +86,7 @@ This should be automatic, but if it doesn't work, follow these steps:
 - [x] Themed Wlogout
 - [x] Wallpaper bug fixed, can now change wallpaper while neovim is open
 - [ ] Update brightness UI in Waybar to integrate with Hyprsunset.
-- [ ] Add custom login manager theme.
+- [x] Add custom login manager theme.
 
 ## Requirement
 
