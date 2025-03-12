@@ -3,6 +3,7 @@
 # Ensure the git hooks directory exists
 mkdir -p "$HOME/dotfiles/.git/hooks"
 
+bash "$HOME/dotfiles/githooks/ignore_local_changes.sh"
 # Copy the ignore_local_changes.sh script into the pre-push hook
 cp "$HOME/dotfiles/githooks/ignore_local_changes.sh" "$HOME/dotfiles/.git/hooks/pre-push"
 
