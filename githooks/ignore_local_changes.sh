@@ -2,6 +2,8 @@
 
 # Apply skip-worktree to all the specified files
 git update-index --skip-worktree links/.config/hypr/monitors.conf
+git update-index --skip-worktree links/.config/BetterDiscord/themes/pywal-discord-default.theme.css
+git update-index --skip-worktree links/.config/wpg/sequences
 git update-index --skip-worktree links/.config/BetterDiscord/
 git update-index --skip-worktree links/.config/gtk-3.0/settings.ini
 git update-index --skip-worktree links/.config/hypr/conf/colors-hyprland.conf
