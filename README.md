@@ -45,6 +45,8 @@ Should be automatic else:
 - **Sddm-git**: Display manager
 - **Kitty**: Terminal emulator
 - **Hyprland-git**: Desktop environment
+- **Hyprsunset**: Bluefilter + Brightness
+- **Hyprpolkitagent**: Application permissions
 - **Hypridle**: Inactivity handler
 - **Hyprlock**: Lock screen
 - **SWWW**: Wallpaper engine
@@ -63,10 +65,11 @@ Should be automatic else:
 - **Swappy**: Screenshot editor
 - **Nwg**: GTK manager ui
 - **Starship** Terminal tool
+- **ZSH**: Shell
 
 ## Bugs
 
-- Wallpaper change does not work while Neovim is open.
+- None for now, probably somewhere but haven't noticed
 
 ## TODO
 
@@ -78,8 +81,10 @@ Should be automatic else:
 - [x] Themed Waybar
 - [x] Themed SwayNC
 - [x] Themed Wlogout
+- [x] Wallpaper bug fixed, can now change wallpaper while neovim is open
+- [ ] Update brightness ui in waybar to adapt Hyprsunset 
 
 ## Requirement
 
-Storage around 14.8GB
+Storage around 30GB - For dotfiles and linux, depending on how many kernels etc
 
