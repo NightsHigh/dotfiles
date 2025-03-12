@@ -45,6 +45,6 @@ echo -e "Enabled sddm"
 sudo systemctl enable sddm
 
 # Switch shell to zsh
-sudo chsh -s /bin/zsh "$USER"
+chsh -s "$(which zsh)"
 zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 sudo rm -f "$HOME/.zshrc"
