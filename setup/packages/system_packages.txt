@@ -1,3 +1,11 @@
+pipewire
+pipewire-jack
+pipewire-alsa
+pipewire-pulse
+gst-plugin-pipewire
+libpulse
+wireplumber
+pavucontrol
 sddm-git
 cmake
 cpio
@@ -24,14 +32,6 @@ tofi
 udiskie
 swappy
 mission-center
-pipewire
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-gst-plugin-pipewire
-libpulse
-wireplumber
-pavucontrol
 swww
 kitty
 bluez

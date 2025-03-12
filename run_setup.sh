@@ -88,6 +88,7 @@ if [ "$nvidia_drivers" -eq 0 ]; then
     install_nvidia
 fi
 
+install_system
 
 if [ "$dev_tools" -eq 0 ]; then
     install_dev_tools
@@ -101,7 +102,6 @@ if [ "$media_tools" -eq 0 ]; then
     install_media_tools
 fi
 
-install_system
 
 bash "$SCRIPT_DIR/setup/tools/clean_dotfiles.sh"
 bash "$SCRIPT_DIR/setup/tools/link_dotfiles.sh"
