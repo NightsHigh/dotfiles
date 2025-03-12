@@ -3,8 +3,8 @@ font = "Sans"
 	font-features = ""
 	font-variations = ""
 	hint-font = true
-	text-color = #d7d4d6
-	prompt-background = #010002
+	text-color = #d6d0ed
+	prompt-background = #0e081b
 	prompt-background-padding = 0
 	prompt-background-corner-radius = 0
 
@@ -22,12 +22,12 @@ font = "Sans"
 
 	# Default result text theme
 	# default-result-color = #FFFFFF
-	default-result-background = #010002
+	default-result-background = #0e081b
 	default-result-background-padding = 0
 	default-result-background-corner-radius = 0
 
-	selection-color = #B13D49
-	selection-background = #010002
+	selection-color = #6B54D5
+	selection-background = #0e081b
 	selection-background-padding = 0
 	selection-background-corner-radius = 0
 
@@ -51,14 +51,14 @@ font = "Sans"
 	width = 1280
 	height = 720
 
-	background-color = #010002
+	background-color = #0e081b
 
 	outline-width = 4
 	outline-color = #080800
 
 	border-width = 4
 
-	border-color = #d7d4d6
+	border-color = #d6d0ed
 
 	corner-radius = 10
 
