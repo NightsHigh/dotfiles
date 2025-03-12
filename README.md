@@ -8,7 +8,7 @@ Follow these steps to set up your desktop environment:
 
 ### Step 1: Clone repo
 1. Leave Root: `su your-username`
-2. Clone repo to `git clone https://github.com/eske4/dotfiles.git`
+2. Clone repo to `git clone https://github.com/eske4/dotfiles.git ~/dotfiles`
 
 
 ### Step 2: Configure Hyprland Environment
