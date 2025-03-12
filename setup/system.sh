@@ -19,6 +19,9 @@ mkdir "$HOME"/Applications
 
 # Disable PulseAudio ensuring it uses PipeWire
 
+sudo pacman -R --noconfirm jack2 > /dev/null 2>&1
+sudo pacman -S --noconfirm pipewire-jack > /dev/null 2>&1
+
 sudo systemctl stop pulseaudio.service
 sudo systemctl disable pulseaudio.service
 sudo systemctl mask pulseaudio.service
