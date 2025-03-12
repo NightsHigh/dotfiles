@@ -36,7 +36,7 @@ fi
 
 # Enable and start NetworkManager
 echo "Enabling and starting NetworkManager..."
-sudo systemctl enable --now NetworkManager
+sudo systemctl enable --now NetworkManager.service
 
 # Verify if NetworkManager is running
 echo "Verifying NetworkManager status..."

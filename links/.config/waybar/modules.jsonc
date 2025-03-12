@@ -113,8 +113,8 @@
             " "
         ],
         "tooltip": true,
-        "on-scroll-up": "brightnessctl s 1%+",
-        "on-scroll-down": "brightnessctl s 1%-",
+        "on-scroll-up": "hyprctl hyprsunset gamma +1",
+        "on-scroll-down": "hyprctl hyprsunset gamma -1",
         "on-click": "pkill -x gammastep || gammastep -O 3500K",
         "tooltip-format": "On click bluefilter, gesture to change brightness"
     },

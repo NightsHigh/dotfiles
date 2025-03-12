@@ -14,7 +14,7 @@ qt4ct
 qt5ct
 qt6ct
 nwg-look
-nwg-display
+nwg-displays
 swaync
 slurp
 grim
