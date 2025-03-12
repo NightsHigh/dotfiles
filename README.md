@@ -2,6 +2,8 @@
 
 My dotfile configuration for Arch Linux and Hyprland.
 
+![Desktop Screenshot](https://github.com/eske4/dotfiles/blob/main/images/Desktop.png)
+
 ## Desktop Configuration
 
 Follow these steps to set up your desktop environment:
