@@ -15,6 +15,8 @@ if ! sudo -v; then
     exit 1
 fi
 
+bash "$HOME/dotfiles/init.sh"
+
 # Refresh sudo timestamp periodically to prevent timeout
 (sudo -v; while true; do sleep 60; sudo -v; done) &
 SUDO_PID=$!

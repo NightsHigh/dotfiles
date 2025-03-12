@@ -24,4 +24,4 @@ EOL
 # Make the post-merge hook executable
 chmod +x "$POST_MERGE_HOOK"
 
-echo "Post-merge hook set up successfully. 'init.sh' will run after every pull."
+echo "Update post-merge hook"
