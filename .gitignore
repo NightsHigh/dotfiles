@@ -2,7 +2,7 @@
 
 # To prevent config changes between desktops
 # Prevent config changes between desktops
-/links/.config/hypr/monitor.conf
+/links/.config/hypr/monitors.conf
 /links/.config/BetterDiscord/
 
 /links/.config/gtk-3.0/settings.ini
