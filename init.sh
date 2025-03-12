@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to this init.sh script
-INIT_SCRIPT="$HOME/dotfiles/githooks/init.sh"
+INIT_SCRIPT="$HOME/dotfiles/init.sh"
 
 # Path to the git hooks directory
 HOOKS_DIR="$HOME/dotfiles/.git/hooks"
