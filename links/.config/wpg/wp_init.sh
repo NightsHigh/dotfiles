@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-wpg -rs 'default.png' 'default.png'
+wpg -rs 'sunset-mountain-beautiful-digital-art-scenery.jpg' 'sunset-mountain-beautiful-digital-art-scenery.jpg'

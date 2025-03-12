@@ -2,6 +2,8 @@
 
 if [ -f "$HOME/.zshrc" ]; then
     source "$HOME/.zshrc"
+elif [ -f "$HOME/.bashrc" ]; then
+    source "$HOME/.bashrc"
 fi
 
 #Fetch wallpapers
