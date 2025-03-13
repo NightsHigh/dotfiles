@@ -17,7 +17,7 @@ cat > "$PRE_COMMIT_HOOK" <<EOL
 #!/bin/bash
 
 # Call init.sh after pulling changes (i.e., after git pull)
-echo "Running init.sh after pull..."
+echo "Running init.sh before commit..."
 bash "$INIT_SCRIPT"
 EOL
 
