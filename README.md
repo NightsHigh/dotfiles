@@ -14,6 +14,10 @@ Follow these steps to set up your desktop environment:
    `su your-username`
 2. Clone repo to
    `git clone https://github.com/eske4/dotfiles.git ~/dotfiles`
+3. Make the Initialization Script Executable:
+   `chmod +x ~/dotfiles/init.sh`
+4. Run the Initialization script
+   `~/dotfiles/init.sh`
 
 ### Step 2: Configure Hyprland Environment
 
