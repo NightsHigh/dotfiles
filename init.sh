@@ -5,7 +5,7 @@ INIT_SCRIPT="$HOME/dotfiles/init.sh"
 
 # Path to the git hooks directory
 HOOKS_DIR="$HOME/dotfiles/.git/hooks"
-POST_MERGE_HOOK="$HOOKS_DIR/post-merge"
+PRE_COMMIT_HOOK="$HOOKS_DIR/pre-commit"
 
 # Ensure the git hooks directory exists
 mkdir -p "$HOOKS_DIR"
@@ -13,7 +13,7 @@ mkdir -p "$HOOKS_DIR"
 
 bash "$HOME/dotfiles/githooks/ignore_local_changes.sh"
 
-cat > "$POST_MERGE_HOOK" <<EOL
+cat > "$PRE_COMMIT_HOOK" <<EOL
 #!/bin/bash
 
 # Call init.sh after pulling changes (i.e., after git pull)
@@ -22,6 +22,6 @@ bash "$INIT_SCRIPT"
 EOL
 
 # Make the post-merge hook executable
-chmod +x "$POST_MERGE_HOOK"
+chmod +x "$PRE_COMMIT_HOOK"
 
-echo "Update post-merge hook"
+echo "Update pre-commit hook"
