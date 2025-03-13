@@ -16,7 +16,6 @@ git reset HEAD links/.config/wpg/
 git reset HEAD links/.config/xsettingsd/xsettingsd.conf
 git reset HEAD links/.gtkrc-2.0
 git reset HEAD links/.icons/default/
-git reset HEAD links/Wallpapers/
 
 # Optionally, you can add these to .gitignore if not already done
 # echo "links/.config/hypr/monitors.conf" >> .gitignore
