@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# Source user environment (modify based on your shell)
-if [ -f "$HOME/.profile" ]; then
-    source "$HOME/.profile"
-fi
 if [ -f "$HOME/.zshrc" ]; then
     source "$HOME/.zshrc"
+elif [ -f "$HOME/.bashrc" ]; then
+    source "$HOME/.bashrc"
 fi
-
 
 # kill waybar process
 killall waybar
