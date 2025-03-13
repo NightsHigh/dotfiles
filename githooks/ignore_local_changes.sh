@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Remove files from the Git index
+# Remove files from the Git index (using -r for directories)
 git rm --cached links/.config/hypr/monitors.conf
 git rm --cached links/.config/BetterDiscord/themes/pywal-discord-default.theme.css
 git rm --cached links/.config/wpg/sequences
@@ -15,6 +15,7 @@ git rm --cached links/.config/wlogout/colors-wlogout.css
 git rm --cached links/.config/wpg/
 git rm --cached links/.config/xsettingsd/xsettingsd.conf
 git rm --cached links/.gtkrc-2.0
-git rm --cached links/.icons/default/
-git rm --cached links/Wallpapers/
+git rm --cached links/.icons/default/ -r
+git rm --cached links/Wallpapers/ -r
+
 echo "Avoiding the upload of desktop-specific settings"
