@@ -71,3 +71,6 @@ wl-clipboard
 qt5-quickcontrols2
 qt5-graphicaleffects
 qt5-svg
+7zip
+p7zip
+p7zip-gui
