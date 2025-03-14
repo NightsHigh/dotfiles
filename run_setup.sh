@@ -108,11 +108,8 @@ bash "$SCRIPT_DIR/setup/setup_initial_configs.sh"
 bash "$SCRIPT_DIR/setup/tools/clean_dotfiles.sh"
 bash "$SCRIPT_DIR/setup/tools/link_dotfiles.sh"
 
-
-
-echo "All done! Your system is now configured."
-
 # Stop the sudo refresh process
 kill $SUDO_PID
-
+echo "All done! Your system is now configured. Press any key to reboot"
+read -n 1 -s -r 
 reboot
