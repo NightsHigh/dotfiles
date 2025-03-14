@@ -28,7 +28,7 @@ do
   sleep 1  # Wait for 1 second before checking again
 done
 
-bash "$HOME/dotfiles/links/.config/hypr/conf/scripts/hyprplugin.sh"
+bash "$HOME/dotfiles/setup/system/hyprplugin.sh"
 
 if [ -f "$HOME/.init_media_tools" ]; then
     echo "File exists."
