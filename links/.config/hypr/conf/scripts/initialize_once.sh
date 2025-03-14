@@ -10,7 +10,8 @@ if [ -f "$FLAG_FILE" ]; then
 fi
 
 
-sleep 5
+swww img "$HOME/Wallpapers/default.png --transition-step 20 --transition-fps 60 --transition-type center"
+sleep 2
 
 # Wait until Hyprland is running
 PROCESS_NAME="Hyprland"
