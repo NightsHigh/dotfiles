@@ -134,7 +134,7 @@ mode-switcher{
 }
 button {
     width:                       5%;
-    padding:                     12px;
+    padding:                     8px;
     border-radius:               12px;
     background-color:            @background;
     text-color:                  inherit;
