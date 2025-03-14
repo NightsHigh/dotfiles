@@ -32,14 +32,6 @@ Follow these steps to set up your desktop environment:
 1. To set the background, click the gallery icon in the bar at the top-right corner.
 2. To add more wallpapers, navigate to `~/dotfiles/links/Wallpapers` and place your desired images there.
 
-### Step 5: Enable Pywal for Discord: Optional
-
-1. Execute the command `betterdiscordctl reinstall`
-2. Inside Discord find BetterDiscord settings and go under theme and enable pywal theme
-
-This step is only available if you added the media tools
-Reinstall is applied, as there is already a theme file which makes betterdiscordctl think it's installed
-
 ## Dependencies
 
 - **Waybar**: Status bar for Hyprland
