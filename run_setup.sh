@@ -15,8 +15,6 @@ if ! sudo -v; then
     exit 1
 fi
 
-bash "$HOME/dotfiles/init.sh"
-
 # Refresh sudo timestamp periodically to prevent timeout
 (sudo -v; while true; do sleep 60; sudo -v; done) &
 SUDO_PID=$!
@@ -105,6 +103,7 @@ if [ "$media_tools" -eq 0 ]; then
 fi
 
 
+bash "$SCRIPT_DIR/setup/setup_initial_configs.sh"
 bash "$SCRIPT_DIR/setup/tools/clean_dotfiles.sh"
 bash "$SCRIPT_DIR/setup/tools/link_dotfiles.sh"
 

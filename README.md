@@ -33,18 +33,32 @@ Follow these steps to set up your desktop environment:
 2. Ensure the scale is set to 1.
 3. Set the screen size to maximum.
 
-### Step 4: Set Background
+### Step 4: Configure GTK
+
+1. Press Space + Mod(Windows key..)
+2. Search GTK Settings and open it
+3. Select themes in the menu
+
+This are an must as some software require these themes
+
+### Step 5: Add hyprpm plugin - if hyprland plugin system fail
+
+1. Locate the script `hyprplugin.sh` at `~/dotfiles/setup/system/hyprplugin.sh`
+2. Execute the script `./hyprplugin.sh`
+
+This will add the plugins
+
+### Step 6: Set Background: Optional
 
 1. To set the background, click the gallery icon in the bar at the top-right corner.
 2. To add more wallpapers, navigate to `~/dotfiles/links/Wallpapers` and place your desired images there.
 
-### Step 5: Add hyprpm plugin - if hyprland plugin system fail
+### Step 7: Enable Pywal for Discord: Optional
 
-This should be automatic, but if it doesn't work, follow these steps:
+1. Execute the command `betterdiscordctl reinstall`
+2. Inside Discord find BetterDiscord settings and go under theme and enable pywal theme
 
-    1. `hyprpm add https://github.com/hyprwm/hyprland-plugins`
-    2. `hyprpm enable hyprexpo`
-    3. `hyprpm enable hyprbars`
+Reinstall is applied, as there is already a theme file which makes betterdiscordctl think it's installed
 
 ## Dependencies
 

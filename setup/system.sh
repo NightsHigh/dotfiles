@@ -6,11 +6,6 @@ bash "$SCRIPT_DIR/tools/install_packages.sh" yay "$SCRIPT_DIR/packages/system_pa
 bash "$SCRIPT_DIR/system/network.sh"
 bash "$SCRIPT_DIR/system/configure_sddm.sh"
 
-# add hyprland plugins
-hyprpm add https://github.com/hyprwm/hyprland-plugins
-hyprpm enable hyprexpo
-hyprpm enable hyprbars
-
 mkdir "$HOME"/Downloads
 mkdir "$HOME"/Documents
 mkdir "$HOME"/Applications

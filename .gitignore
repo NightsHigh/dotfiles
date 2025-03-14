@@ -1,10 +1,10 @@
 .spacedrive
 
-links/.config/BetterDiscord/
-links/.config/wpg
-links/Wallpapers/*
-!links/Wallpapers/boat.jpg
-!links/Wallpapers/default.png
-!links/Wallpapers/nightsky_mountain.jpg
-!links/Wallpapers/sunset_mountain.jpg
-!links/Wallpapers/wolf.jpg
+links/.config/swaync/colors-swaync.css
+links/.config/waybar/colors-waybar.css
+links/.config/waypaper/config.ini
+links/.config/wlogout/colors-wlogout.css
+links/.config/hypr/conf/colors-hyprland.conf
+links/.config/hypr/monitors.conf
+links/.config/hypr/workspaces.conf
+links/.config/tofi/config

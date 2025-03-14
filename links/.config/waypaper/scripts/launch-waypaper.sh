@@ -7,7 +7,7 @@ elif [ -f "$HOME/.bashrc" ]; then
 fi
 
 #Fetch wallpapers
-nohup wpg -a ~/dotfiles/links/Wallpapers/* &
+nohup wpg -a "$HOME/Wallpapers/*" &
 
 sleep 0.2
 
