@@ -30,6 +30,14 @@ done
 
 bash "$HOME/dotfiles/links/.config/hypr/conf/scripts/hyprplugin.sh"
 
+if [ -f "$HOME/.init_media_tools" ]; then
+    echo "File exists."
+    bash "$HOME/dotfiles/setup/applications/betterdiscord.sh"
+    rm -rf "$HOME/.init_media_tools"
+else
+    echo "File does not exist."
+fi
+
 notify-send -t 6000 "Set your gtk theme!"
 nwg-look
 

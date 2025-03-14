@@ -46,7 +46,7 @@ install_nvidia() {
 install_media_tools() {
     echo "Installing basic tools (VLC, Discord etc)"
     bash "$SCRIPT_DIR/setup/tools/install_packages.sh" pacman "$SCRIPT_DIR/setup/packages/basic_tools.txt"    
-    bash "$SCRIPT_DIR/setup/applications/betterdiscord.sh"
+    touch "$HOME/.init_media_tools"
 }
 
 # Function to ask a yes/no question and return the answer as a boolean
