@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Define the path to the flag file
+FLAG_FILE="$HOME/.initialized"
+
+# Check if the flag file exists
+if [ -f "$FLAG_FILE" ]; then
+  echo "Script has already run. Exiting."
+  exit 0
+fi
+
+
+sleep 5
+
+# Wait until Hyprland is running
+PROCESS_NAME="Hyprland"
+until pgrep -x "$PROCESS_NAME" > /dev/null
+do
+  echo "Waiting for $PROCESS_NAME to start..."
+  sleep 1  # Wait for 1 second before checking again
+done
+
+bash "$HOME/dotfiles/links/.config/hypr/conf/scripts/hyprplugin.sh"
+
+notify-send -t 6000 "Set your gtk theme!"
+nwg-look
+
+notify-send -t 6000 "Configure your monitor"
+nwg-displays
+
+notify-send -t 6000 "Configuration done!"
+
+# Create the flag file to indicate the script has run
+#
+touch "$FLAG_FILE"
