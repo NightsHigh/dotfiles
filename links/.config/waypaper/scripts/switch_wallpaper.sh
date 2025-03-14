@@ -30,6 +30,7 @@ if [[ -n $WALLPAPER ]]; then
     pywal-discord -d "$WALLPAPER" &
     pywal-discord -t default &
 
+    rm -rf "$HOME/Wallpapers/.current"
     cp "$HOME/.config/wpg/.current" "$HOME/Wallpapers/.current"
 
 

@@ -3,6 +3,7 @@
 My dotfile configuration for Arch Linux and Hyprland.
 
 ![Desktop Screenshot](https://github.com/eske4/dotfiles/blob/main/images/Desktop.png)
+![Desktop Screenshot](https://github.com/eske4/dotfiles/blob/main/images/Desktop_launcher.png)
 
 ---
 
