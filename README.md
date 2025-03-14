@@ -4,6 +4,8 @@ My dotfile configuration for Arch Linux and Hyprland.
 
 ![Desktop Screenshot](https://github.com/eske4/dotfiles/blob/main/images/Desktop.png)
 
+---
+
 ## Desktop Configuration
 
 Follow these steps to set up your desktop environment:
@@ -31,6 +33,8 @@ Follow these steps to set up your desktop environment:
 
 1. To set the background, click the gallery icon in the bar at the top-right corner.
 2. To add more wallpapers, navigate to `~/dotfiles/links/Wallpapers` and place your desired images there.
+
+---
 
 ## Dependencies
 
@@ -61,9 +65,52 @@ Follow these steps to set up your desktop environment:
 - **Starship** Terminal tool
 - **ZSH**: Shell enviroment
 
+---
+
+## My Shortcuts
+
+`mainMod` refers to the **Windows key** (depending on your keyboard).
+
+- `mainMod + T`: Open the terminal
+- `mainMod + Q`: Close the application
+- `mainMod + M`: Exit Hyprland
+- `mainMod + E`: Open the file manager
+- `mainMod + F`: Open the file manager
+- `mainMod + SPACE`: Open the application launcher
+- `mainMod + F11`: Toggle full-screen mode
+- `mainMod + B`: Open the browser
+
+### Window Management
+
+- `mainMod + SHIFT + h, j, k, l`: Resize a window left, down, up, or right
+- `mainMod + right_mouse_click`: Resize a window with the mouse
+- `mainMod + h, j, k, l`: Shift window focus left, down, up, or right
+- `mainMod + mouse_up/down`: Scroll through workspaces
+
+### Workspace Management
+
+- `mainMod + V`: Open clipboard history
+- `mainMod + 1-10`: Toggle between workspaces 1-10
+- `mainMod + Shift + 1-10`: Move a window to workspace 1-10
+
+### Special Workspace
+
+- `mainMod + S`: Go to special workspace
+- `mainMod + SHIFT + S`: Move window to special workspace
+
+### Other Shortcuts
+
+- `alt + tab`: Desktop overview with **hyprexpo**
+- `prtsc`: Screenshot with **Grim**, **Slurp**, and **Swappy**
+- Volume and brightness adjustments using **Fn** key
+
+---
+
 ## Bugs
 
 - No major bugs reported so far. If any appear, they haven't been noticed yet.
+
+---
 
 ## TODO
 
@@ -79,6 +126,8 @@ Follow these steps to set up your desktop environment:
 - [ ] Update brightness UI in Waybar to integrate with Hyprsunset.
 - [x] Add custom login manager theme.
 
+---
+
 ## Requirement
 
-Storage around 30GB - For dotfiles and linux, depending on how many kernels etc
+- **Storage**: Approximately **30GB** for the dotfiles and Linux installation (this may vary depending on the number of kernels installed).
