@@ -29,9 +29,10 @@ files=(
     "$SCRIPT_DIR/initial_config/.config/waybar/colors-waybar.css:$HOME/dotfiles/links/.config/waybar/"
     "$SCRIPT_DIR/initial_config/.config/waypaper/config.ini:$HOME/dotfiles/links/.config/waypaper/"
     "$SCRIPT_DIR/initial_config/.config/wlogout/colors-wlogout.css:$HOME/dotfiles/links/.config/wlogout/"
-    "$SCRIPT_DIR/initial_config/.config/BetterDiscord/themes/pywal-discord-default.theme.css:$HOME/.config/BetterDiscord/themes/"
-    "$SCRIPT_DIR/initial_config/.config/BetterDiscord/data/stable/themes.json:$HOME/.config/BetterDiscord/data/stable/"
+    "$SCRIPT_DIR/initial_config/.config/rofi/themes/colors-rofi.rasi:$HOME/dotfiles/links/.config/rofi/themes/colors-rofi.rasi"
 )
+
+ln -s "$HOME/Wallpapers/default.png" "$HOME/Wallpapers/.current"
 
 echo "Setting up initial configurations..."
 # Copy each file
