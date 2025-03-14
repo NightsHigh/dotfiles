@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ -f "$HOME/.zshrc" ]; then
-    source "$HOME/.zshrc"
-elif [ -f "$HOME/.bashrc" ]; then
-    source "$HOME/.bashrc"
+if [ -e "$HOME/.zshrc" ]; then
+    source "$HOME/dotfiles/links/.zshrc"
+elif [ -e "$HOME/.bashrc" ]; then
+    source "$HOME/dotfiles/links/.bashrc"
 fi
 
 #Fetch wallpapers
