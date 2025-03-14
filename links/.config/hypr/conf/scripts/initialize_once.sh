@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [ -f "$HOME/.zshrc" ]; then
+    source "$HOME/.zshrc"
+elif [ -f "$HOME/.bashrc" ]; then
+    source "$HOME/.bashrc"
+fi
+
+
 # Define the path to the flag file
 FLAG_FILE="$HOME/.initialized"
 
