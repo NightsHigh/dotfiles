@@ -124,6 +124,7 @@ Follow these steps to set up your desktop environment:
 - [x] Themed Wlogout
 - [x] Wallpaper bug fixed, can now change wallpaper while neovim is open
 - [ ] Update brightness UI in Waybar to integrate with Hyprsunset.
+- [ ] Customize to a prettier application launcher
 - [x] Add custom login manager theme.
 
 ---
