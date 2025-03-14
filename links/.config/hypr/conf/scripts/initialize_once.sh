@@ -11,7 +11,7 @@ fi
 FLAG_FILE="$HOME/.initialized"
 
 # Check if the flag file exists
-if [ -f "$FLAG_FILE" ]; then
+if [ -e "$FLAG_FILE" ]; then
   echo "Script has already run. Exiting."
   exit 0
 fi
