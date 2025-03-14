@@ -138,8 +138,10 @@ button {
     border-radius:               12px;
     background-color:            @background;
     text-color:                  inherit;
+    border:                      2px solid;
     cursor:                      pointer;
 }
+
 button selected {
     background-color:            @active;
     text-color:                  @text-selected;
