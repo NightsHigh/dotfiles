@@ -8,6 +8,14 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 copy_file() {
     local src="$1"
     local dest="$2"
+
+    # Check if the destination is a file and remove it if necessary
+    if [ -f "$dest" ]; then
+        echo "Error: A file already exists at the destination ($dest), but a directory is expected."
+        echo "Attempting to remove the conflicting file..."
+        rm -f "$dest"  # Be cautious! This deletes the file permanently
+    fi
+
     mkdir -p "$(dirname "$dest")"
     cp -f "$src" "$dest" && echo "Copied: $src to $dest"
 }
@@ -16,12 +24,12 @@ copy_file() {
 files=(
     "$SCRIPT_DIR/initial_config/.config/hypr/workspaces.conf:$HOME/.config/hypr/"
     "$SCRIPT_DIR/initial_config/.config/hypr/monitors.conf:$HOME/.config/hypr/"
-    "$SCRIPT_DIR/initial_config/.config/hypr/conf/colors-hyprland.conf:$HOME/.config/hypr/conf/"
-    "$SCRIPT_DIR/initial_config/.config/swaync/colors-swaync.css:$HOME/.config/swaync/"
-    "$SCRIPT_DIR/initial_config/.config/tofi/config:$HOME/.config/tofi/config"
-    "$SCRIPT_DIR/initial_config/.config/waybar/colors-waybar.css:$HOME/.config/waybar/"
-    "$SCRIPT_DIR/initial_config/.config/waypaper/config.ini:$HOME/.config/waypaper/"
-    "$SCRIPT_DIR/initial_config/.config/wlogout/colors-wlogout.css:$HOME/.config/wlogout/"
+    "$SCRIPT_DIR/initial_config/.config/hypr/conf/colors-hyprland.conf:$HOME/dotfiles/links/.config/hypr/conf/"
+    "$SCRIPT_DIR/initial_config/.config/swaync/colors-swaync.css:$HOME/dotfiles/links/.config/swaync/"
+    "$SCRIPT_DIR/initial_config/.config/tofi/config:$HOME/dotfiles/links/.config/tofi/config"
+    "$SCRIPT_DIR/initial_config/.config/waybar/colors-waybar.css:$HOME/dotfiles/links/.config/waybar/"
+    "$SCRIPT_DIR/initial_config/.config/waypaper/config.ini:$HOME/dotfiles/links/.config/waypaper/"
+    "$SCRIPT_DIR/initial_config/.config/wlogout/colors-wlogout.css:$HOME/dotfiles/links/.config/wlogout/"
     "$SCRIPT_DIR/initial_config/.config/BetterDiscord/themes/pywal-discord-default.theme.css:$HOME/.config/BetterDiscord/themes/"
     "$SCRIPT_DIR/initial_config/.config/BetterDiscord/data/stable/themes.json:$HOME/.config/BetterDiscord/data/stable/"
 )
