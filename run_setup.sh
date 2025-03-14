@@ -115,3 +115,4 @@ echo "All done! Your system is now configured."
 # Stop the sudo refresh process
 kill $SUDO_PID
 
+reboot
