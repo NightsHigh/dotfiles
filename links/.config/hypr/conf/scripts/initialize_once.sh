@@ -30,7 +30,7 @@ done
 
 bash "$HOME/dotfiles/setup/system/hyprplugin.sh"
 
-if [ -f "$HOME/.init_media_tools" ]; then
+if [ -e "$HOME/.init_media_tools" ]; then
     echo "File exists."
     bash "$HOME/dotfiles/setup/applications/betterdiscord.sh"
     rm -rf "$HOME/.init_media_tools"
