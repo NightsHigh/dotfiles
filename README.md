@@ -101,7 +101,8 @@ Follow these steps to set up your desktop environment:
 
 ### Other Shortcuts
 
-- `alt + tab`: Desktop overview with **hyprexpo**
+- `alt + tab`: Window switch **Rofi**
+- `mainMod + tab`: Desktop overview with **hyprexpo**
 - `prtsc`: Screenshot with **Grim**, **Slurp**, and **Swappy**
 - Volume and brightness adjustments using **Fn** key
 
