@@ -32,8 +32,6 @@ files=(
     "$SCRIPT_DIR/initial_config/.config/rofi/themes/colors-rofi.rasi:$HOME/dotfiles/links/.config/rofi/themes/colors-rofi.rasi"
 )
 
-ln -s "$HOME/Wallpapers/default.png" "$HOME/Wallpapers/.current"
-
 echo "Setting up initial configurations..."
 # Copy each file
 for file in "${files[@]}"; do
@@ -43,8 +41,9 @@ done
 
 # Copy wallpapers folder
 echo "Copying wallpapers..."
-cp -rf "$SCRIPT_DIR/initial_config/Wallpapers/" "$HOME/Wallpapers/"
+cp -rf "$SCRIPT_DIR/initial_config/Wallpapers/" "$HOME"
 echo "Copied wallpapers to $HOME/Wallpapers/"
 
+ln -s "$HOME/Wallpapers/default.png" "$HOME/Wallpapers/.current"
 echo "Setup complete."
 
