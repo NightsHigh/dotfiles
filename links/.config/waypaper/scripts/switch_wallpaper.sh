@@ -21,17 +21,16 @@ if [[ -n $WALLPAPER ]]; then
 
 
     # Apply colorscheme
-    cp -f ~/.cache/wal/colors-tofi.conf "$HOME"/dotfiles/links/.config/tofi/config
-    cp -f ~/.cache/wal/colors-hyprland.conf "$HOME"/dotfiles/links/.config/hypr/conf/colors-hyprland.conf
-    cp -f ~/.cache/wal/colors-waybar.css "$HOME"/dotfiles/links/.config/waybar/colors-waybar.css
-    cp -f ~/.cache/wal/colors-swaync.css "$HOME"/dotfiles/links/.config/swaync/colors-swaync.css
-    cp -f ~/.cache/wal/colors-wlogout.css "$HOME"/dotfiles/links/.config/wlogout/colors-wlogout.css
+    cp -f "$HOME/.cache/wal/colors-tofi.conf" "$HOME"/dotfiles/links/.config/tofi/config
+    cp -f "$HOME/.cache/wal/colors-hyprland.conf" "$HOME/dotfiles/links/.config/hypr/conf/colors-hyprland.conf"
+    cp -f "$HOME/.cache/wal/colors-waybar.css" "$HOME/dotfiles/links/.config/waybar/colors-waybar.css"
+    cp -f "$HOME/.cache/wal/colors-swaync.css" "$HOME/dotfiles/links/.config/swaync/colors-swaync.css"
+    cp -f "$HOME/.cache/wal/colors-wlogout.css" "$HOME/dotfiles/links/.config/wlogout/colors-wlogout.css"
+    cp -f "$HOME/.cache/wal/colors-rofi.rasi" "$HOME/.config/rofi/themes/"
     pywal-discord -d "$WALLPAPER" &
     pywal-discord -t default &
 
-    if [[ "$1" == *.jpg || "$1" == *.png ]]; then
-        cp -r "$HOME/dotfiles/links/.config/wpg/.current" "$HOME/dotfiles/links/Wallpapers/.current"
-    fi
+    cp "$HOME/.config/wpg/.current" "$HOME/Wallpapers/.current"
 
 
     # Start waybar again

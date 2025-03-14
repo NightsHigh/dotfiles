@@ -1,0 +1,7 @@
+configuration {
+  font: "FiraCode Nerd Font SemiBold 15";
+}
+
+element-text {
+  font: "FiraCode Nerd Font SemiBold 15";
+}

@@ -132,7 +132,7 @@
     "custom/applauncher": {
         "format": "{icon}",
         "format-icons": "",
-        "on-click": "tofi-drun --drun-launch=true",
+        "on-click": "rofi -show drun -modi drun",
         "tooltip": "true",
         "tooltip-format": "App launcher"
     },

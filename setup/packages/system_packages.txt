@@ -41,7 +41,7 @@ font-manager
 wget
 ttf-maple
 ttf-jetbrains-mono-nerd
-ttf-firacode
+ttf-firacode-nerd
 ttf-font-awesome
 gtk3
 gtk-layer-shell
@@ -75,3 +75,4 @@ qt5-svg
 p7zip
 p7zip-gui
 breeze-icons
+rofi-wayland

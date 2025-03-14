@@ -1,0 +1,11 @@
+/* Font config */
+@import "~/dotfiles/links/.config/rofi/configs/global_settings.rasi"
+
+/* App Launcher */ 
+@import "~/dotfiles/links/.config/rofi/configs/app-launcher.rasi"
+
+/* note: Main themes in ~/.config/rofi/themes */
+/* You can manually change here or you can use rofi theme selector SUPER SHIFT E */
+
+
+
