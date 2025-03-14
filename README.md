@@ -46,7 +46,7 @@ This are an must as some software require these themes
 1. Locate the script `hyprplugin.sh` at `~/dotfiles/setup/system/hyprplugin.sh`
 2. Execute the script `./hyprplugin.sh`
 
-This will add the plugins
+Hyprplugin can only be installed, while the Hyprland is running. Therefor this script has to be executed
 
 ### Step 6: Set Background: Optional
 
