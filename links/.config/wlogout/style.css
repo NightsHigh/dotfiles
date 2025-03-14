@@ -20,18 +20,18 @@ by Stephan Raabe (2023)
  * ----------------------------------------------------- */
 
 * {
-  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial,
-    sans-serif;
+  font-family:
+    "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   background-image: none;
   transition: 20ms;
 }
 
 window {
-  background-color: @color0;
+  background-color: @transparent-background;
 }
 
 button {
-  color: #ffffff;
+  color: @foreground;
   font-size: 20px;
 
   background-repeat: no-repeat;
@@ -39,19 +39,14 @@ button {
   background-size: 25%;
 
   border-style: solid;
-  background-color: rgba(12, 12, 12, 0.3);
-  border: 3px solid #ffffff;
-
-  box-shadow:
-    0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: @background;
+  border: 3px solid @foreground;
 }
 
-button:focus,
 button:active,
 button:hover {
   color: @color11;
-  background-color: rgba(12, 12, 12, 0.5);
+  background-color: @background;
   border: 3px solid @color11;
 }
 
