@@ -1,0 +1,152 @@
+@theme "~/.config/rofi/themes/colors-rofi.rasi"
+
+/* ---- Global Properties ---- */
+* {
+
+    background-alt:              @color1;
+    selected:                    @color12;
+    active:                      @color11;
+    urgent:                      @foreground;
+
+    text-selected:               @background;
+    text-color:                  @foreground;
+    border-color:                @foreground;
+}
+
+
+
+configuration {
+	modi:                       "drun,run,filebrowser";
+    display-drun:               "  Apps";
+    display-run:                "  Term";
+    display-filebrowser:        "  Files";
+    display-window:             "  Window";
+	drun-display-format:        "{name}";
+	hover-select:               true;
+	me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+	window-format:              "{w} · {c} · {t}";
+    font:                       "FiraCode Nerd Font SemiBold 15";
+}
+
+window {
+    // Default
+    enabled:                    true;
+    fullscreen:                 false;
+    transparency:               "real";
+    cursor:                     "default";
+    spacing:                    0px;
+    width:                      35%;
+    border:                     2px;
+    border-radius:              30px;
+    location:                   center;
+    anchor:                     center;
+
+    // Style Values
+    width:                      50%;
+    background-color:           @transparent-background;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @foreground;
+    background-color:            inherit;
+    children:                    [ "inputbar", "message", "custombox" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     8px 12px;
+    border:                      0px solid;
+    border-radius:               8px;
+    border-color:                @foreground;
+    background-color:            @alternate-background;
+    text-color:                  @foreground;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+
+
+
+inputbar {
+    enabled:                     true;
+    padding:                     10px 10px 10px 10px;
+    margin:                      10px;
+    background-color:            transparent;
+    border-radius:               25px;
+    orientation:                 horizontal;
+    children:                    ["entry" ];
+    background-image:            url("~/Wallpapers/.current", width);
+}
+
+
+entry {
+    enabled:                     true;
+    expand:                      false;
+    padding:                     10px;
+    border-radius:               12px;
+    background-color:            @background;
+    border:                      2px solid;
+    border-color:                @foreground;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder-color:           inherit;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     5px;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      2px 2px 2px 2px;
+    border-radius:               8px;
+    border-color:                @foreground;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               8px;
+    border-color:                @foreground;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+
+
+
+
+
+element-text {
+  text-color:   @foreground;
+  font: "FiraCode Nerd Font SemiBold 15";
+}

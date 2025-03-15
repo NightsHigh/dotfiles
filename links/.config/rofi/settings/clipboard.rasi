@@ -1,0 +1,51 @@
+@import "~/.config/rofi/config.rasi"  
+
+configuration {
+    show-icons: false;
+}
+
+/* ---- Window ---- */
+window {
+  width: inherit;
+  background-color:     inherit;
+}
+
+/* ---- Mainbox ---- */
+mainbox {
+  children:
+    [ "inputbar", "message", "listview"];
+}
+
+/* ---- Entry ---- */
+entry {
+  width: inherit;
+  placeholder: " 📋 Search Clipboard ";
+  text-color:  @foreground;
+  background-color: @background;
+}
+
+/* ---- Listview ---- */
+listview {
+  columns: 1;
+  lines: 8;
+  fixed-height: true;
+  spacing: 0px;
+  cycle: true;
+}
+
+/* ---- Elements ---- */
+element {
+  orientation: horizontal;
+}
+
+element-icon {
+  size: 0%;
+}
+
+element-text {
+  horizontal-align: 0.0;
+  vertical-align: 0.5;
+  margin: 0px;
+  padding: 0px;
+}
+

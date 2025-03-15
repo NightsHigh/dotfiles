@@ -1,0 +1,49 @@
+@theme "~/.config/rofi/settings/app-launcher.rasi"
+
+/* ---- Elements ---- */
+element {
+    children: [ element-text ];
+}
+
+entry {
+  width:                       inherit;
+
+}
+
+inputbar {
+    enabled:                     true;
+    padding:                     10px 10px 10px 10px;
+    margin:                      10px;
+    background-color:            transparent;
+    border-radius:               25px;
+    orientation:                 horizontal;
+    children:                    [ "entry"];
+    background-image:            url("~/Wallpapers/.current", width);
+}
+
+
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;    
+    spacing:                     10px;
+    padding:					 10px;
+    background-color:            transparent;
+
+//  Adapt rofi theme
+    border:                      0px;
+}
+
+
+
+
+
+

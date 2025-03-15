@@ -132,7 +132,7 @@
     "custom/applauncher": {
         "format": "{icon}",
         "format-icons": "",
-        "on-click": "rofi -show drun -modi drun",
+        "on-click": "rofi -show drun -modi drun -config ~/dotfiles/links/.config/rofi/settings/app-launcher.rasi",
         "tooltip": "true",
         "tooltip-format": "App launcher"
     },

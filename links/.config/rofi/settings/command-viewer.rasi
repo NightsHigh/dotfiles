@@ -1,0 +1,7 @@
+@theme "~/.config/rofi/settings/simple-menu.rasi"
+
+entry {
+  placeholder: "   Search Commands ";
+
+}
+
