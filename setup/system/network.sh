@@ -19,4 +19,4 @@ else
     exit 1
 fi
 
-echo "NetworkManager configuration complete for $NETWORK_INTERFACE!"
+echo "NetworkManager configuration complete"
