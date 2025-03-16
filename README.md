@@ -91,6 +91,7 @@ Follow these steps to set up your desktop environment:
 ### Workspace Management
 
 - `mainMod + V`: Open clipboard history
+- `mainMod + C`: Command viewer
 - `mainMod + 1-10`: Toggle between workspaces 1-10
 - `mainMod + Shift + 1-10`: Move a window to workspace 1-10
 
