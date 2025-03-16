@@ -30,6 +30,7 @@ files=(
     "$SCRIPT_DIR/initial_config/.config/waypaper/config.ini:$HOME/dotfiles/links/.config/waypaper/"
     "$SCRIPT_DIR/initial_config/.config/wlogout/colors-wlogout.css:$HOME/dotfiles/links/.config/wlogout/"
     "$SCRIPT_DIR/initial_config/.config/rofi/themes/colors-rofi.rasi:$HOME/dotfiles/links/.config/rofi/themes/colors-rofi.rasi"
+    "$SCRIPT_DIR/initial_config/.config/kitty/colors-kitty.conf:$HOME/dotfiles/links/.config/kitty/colors-kitty.conf"
 )
 
 echo "Setting up initial configurations..."
