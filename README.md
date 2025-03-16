@@ -49,14 +49,14 @@ Follow these steps to set up your desktop environment:
 - **Hypridle**: Inactivity handler
 - **Hyprlock**: Lock screen
 - **SWWW**: Wallpaper engine
-- **Waypaper**: Wallpaper changer UI
+- **Rofi**: Wallpaper, app-launcher etc
 - **UDiskie**: External drive manager
 - **Pipewire**: Audio engine
 - **Wireplumber**: Pipewire session manager
 - **Pavucontrol**: Audio control UI
 - **Slurp** and **Grim**: Screenshot system
 - **Cliphist**: Clipboard manager
-- **Pywal**: Theming tool
+- **Wallust**: Theming tool
 - **Wpgtk**: Pywal manager
 - **SwayNc**: Notification center
 - **UPower**: Power management tool
