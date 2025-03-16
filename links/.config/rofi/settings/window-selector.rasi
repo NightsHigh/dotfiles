@@ -1,18 +1,5 @@
 @theme "~/.config/rofi/themes/global_settings.rasi"
 
-/* ---- Global Properties ---- */
-* {
-
-    background-alt:              @color1;
-    selected:                    @color12;
-    active:                      @color11;
-    urgent:                      @foreground;
-
-    text-selected:               @background;
-    text-color:                  @foreground;
-    border-color:                @foreground;
-}
-
 configuration {
 
 	window-format:              "{w} {c} {t}";
@@ -102,59 +89,6 @@ element {
     children: [ element-icon, element-text ];
 }
 
-element normal.normal {
-    background-color:            @background;
-    text-color:                  inherit;
-}
-element normal.urgent {
-    background-color:            @urgent;
-    text-color:                  @foreground;
-}
-
-element-text selected,
-element normal.active {
-    background-color:            @active;
-    text-color:                  @foreground;
-}
-
-element selected.normal {
-    background-color:            @active;
-    text-color:                  @text-selected;
-}
-element selected.urgent {
-    background-color:            @urgent;
-    text-color:                  @text-selected;
-}
-element selected.active {
-    background-color:            @urgent;
-    text-color:                  @text-selected;
-}
-// Adapt rofi theme
-element alternate.normal {
-    background-color:            @background;
-    text-color:                  inherit;
-}
-element alternate.urgent {
-    background-color:            @background;
-    text-color:                  inherit;
-}
-element alternate.active {
-    background-color:            @background;
-    text-color:                  inherit;
-}
-element-icon {
-    background-color:            transparent;
-    text-color:                  inherit;
-    size:                        36px;
-    cursor:                      inherit;
-}
-element-text {
-    background-color:            transparent;
-    text-color:                  inherit;
-    cursor:                      inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
-}
 
 /* ---- Message ---- */
 message {

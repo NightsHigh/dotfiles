@@ -28,23 +28,36 @@ entry {
 
 /* ---- Listview ---- */
 listview {
-  columns: 4;
-  lines: 2;
-  spacing: 20px;
-  padding: 10px;
-  flow: horizontal;
-  fixed-width: true;
-  fixed-height: true;
-  cycle: true;
+    enabled:                     true;
+    columns:                     4;
+    lines:                       2;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               false;    
+    spacing:                     10px;
+    padding:					 10px;
+    background-color:            transparent;
+
+//  Adapt rofi theme
+    border:                      0px;
+    children: ["scrollbar"];
 }
+
+
+
 
 /* ---- Element ---- */
 element {
   orientation: vertical;
   padding: 0px;
-  spacing: 0px;
+  spacing: 10px;
   border-radius: 10px;
   padding: 0px;
+
   margin: 0px;
 }
 
@@ -64,5 +77,6 @@ element-text {
   horizontal-align: 0.5;
   padding: 6px;
   margin: 6px;
+  border-radius: 10px;
 }
 
