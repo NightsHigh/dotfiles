@@ -27,6 +27,8 @@ change_wallpaper() {
     swww img "$image" $SWWW_PARAMS
     rm "$wallpaper_directory/.current"
     ln -s "$image" "$HOME/Wallpapers/.current"
+    notify-send -t 6000 -i "$notification_icon" "Generating colorscheme.." "$(basename "$image")" 
+
     wallust run "$image"
 
 

@@ -1,25 +1,47 @@
 * {
-    background: #0e081b;
-    foreground: #d6d0ed;
-    transparent-background: rgba(14,8,27,0.70);
+active-background: #F9E4A6;
+active-foreground: #FFF8E7;
+normal-background: #18141D;
+normal-foreground: #FFF8E7;
+urgent-background: #FDE4CA;
+urgent-foreground: #FFF8E7;
 
-    cursor: #d6d0ed;
-    color0: #0e081b;
-    color1: #6B54D5;
-    color2: #9351B0;
-    color3: #A44EB9;
-    color4: #9D60D6;
-    color5: #CF71D7;
-    color6: #6E96DD;
-    color7: #d6d0ed;
-    color8: #9591a5;
-    color9: #6B54D5;
-    color10: #9351B0;
-    color11: #A44EB9;
-    color12: #9D60D6;
-    color13: #CF71D7;
-    color14: #6E96DD;
-    color15: #d6d0ed;
- }
+alternate-active-background: #DB7CE5;
+alternate-active-foreground: #FFF8E7;
+alternate-normal-background: #18141D;
+alternate-normal-foreground: #FFF8E7;
+alternate-urgent-background: #18141D;
+alternate-urgent-foreground: #FFF8E7;
 
+selected-active-background: #FDE4CA;
+selected-active-foreground: #FFF8E7;
+selected-normal-background: #FDE4CA;
+selected-normal-foreground: #FFF8E7;
+selected-urgent-background: #F9E4A6;
+selected-urgent-foreground: #FFF8E7;
+
+background-color: #18141D;
+background: rgba(24,20,29,0.7);
+foreground: #FFF8E7;
+border-color: #F9E4A6;
+
+color0: #403B45;
+color1: #875AA1;
+color2: #6D74A9;
+color3: #A45DAC;
+color4: #BAAB7C;
+color5: #BEAB98;
+color6: #BFAF8B;
+color7: #F7ECD4;
+color8: #ADA594;
+color9: #B477D7;
+color10: #919BE2;
+color11: #DB7CE5;
+color12: #F9E4A6;
+color13: #FDE4CA;
+color14: #FFEAB9;
+color15: #F7ECD4;
+
+
+}
 
