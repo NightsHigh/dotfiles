@@ -2,16 +2,12 @@
 
 # Set the WALLPAPER variable to the provided argument
 WALLPAPER=$(basename "$1")
-
+echo $WALLPAPER
 
 sleep 0.2
 
 
 if [[ -n $WALLPAPER ]]; then
-
-    # Generate colorscheme
-    wpg -s "$WALLPAPER" 
-
 
     # kill waybar process
     killall waypaper
@@ -21,12 +17,7 @@ if [[ -n $WALLPAPER ]]; then
 
 
     # Apply colorscheme
-    cp -f "$HOME/.cache/wal/colors-tofi.conf" "$HOME"/dotfiles/links/.config/tofi/config
-    cp -f "$HOME/.cache/wal/colors-hyprland.conf" "$HOME/dotfiles/links/.config/hypr/conf/colors-hyprland.conf"
-    cp -f "$HOME/.cache/wal/colors-waybar.css" "$HOME/dotfiles/links/.config/waybar/colors-waybar.css"
-    cp -f "$HOME/.cache/wal/colors-swaync.css" "$HOME/dotfiles/links/.config/swaync/colors-swaync.css"
-    cp -f "$HOME/.cache/wal/colors-wlogout.css" "$HOME/dotfiles/links/.config/wlogout/colors-wlogout.css"
-    cp -f "$HOME/.cache/wal/colors-rofi.rasi" "$HOME/.config/rofi/themes/"
+    wallust run "$WALLPAPER"
     pywal-discord -d "$WALLPAPER" &
     pywal-discord -t default &
 

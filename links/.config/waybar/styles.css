@@ -2,9 +2,9 @@
 @import "colors-waybar.css";
 
 /* Define colors */
-@define-color bg @color0;
-@define-color fg @color15;
-@define-color accent @color1;
+@define-color bg @background;
+@define-color fg @foreground;
+@define-color accent @color12;
 @define-color warning @color3;
 
 /* Reset styles for all elements */

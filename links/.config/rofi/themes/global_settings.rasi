@@ -21,6 +21,7 @@ configuration {
     display-run:                "  Term";
     display-filebrowser:        "  Files";
     display-window:             "  Window";
+    show-icons:                 true;
 	drun-display-format:        "{name}";
 	hover-select:               true;
 	me-select-entry:            "MouseSecondary";

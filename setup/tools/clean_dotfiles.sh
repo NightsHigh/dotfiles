@@ -28,6 +28,7 @@ rm -rf "$HOME/.config/zsh"
 rm -rf "$HOME/.config/icons"
 rm -rf "$HOME/.config/BetterDiscord/data/stable/themes.json"
 rm -rf "$HOME/.config/starship.toml"
+rm -rf "$HOME/.config/wallust"
 
 # Tmux folder cleanup
 rm -rf "$HOME/.tmux/plugins/tmux-which-key/config.yaml"

@@ -33,7 +33,7 @@ window {
 
     // Style Values
     width:                      50%;
-    background-color:           @transparent-background;
+    background-color:           @background;
 }
 
 /* ----- Main Box ----- */
@@ -97,7 +97,7 @@ element {
 
     border:                      1px solid;
 
-    background-color:            @transparent-background;
+    background-color:            @background;
     cursor:                      pointer;
     children: [ element-icon, element-text ];
 }

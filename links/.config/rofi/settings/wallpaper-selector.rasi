@@ -1,7 +1,7 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 /* Main Config (wallpaper) */
 
-@import "~/.config/rofi/config.rasi"  
+@import "~/dotfiles/links/.config/rofi/config.rasi"  
 
 /* ---- Configuration ---- */ 
 configuration {
@@ -28,8 +28,8 @@ entry {
 
 /* ---- Listview ---- */
 listview {
-  columns: 6;
-  lines: 3;
+  columns: 4;
+  lines: 2;
   spacing: 20px;
   padding: 10px;
   flow: horizontal;
@@ -65,3 +65,4 @@ element-text {
   padding: 6px;
   margin: 6px;
 }
+

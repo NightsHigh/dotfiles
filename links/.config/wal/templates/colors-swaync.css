@@ -1,6 +1,0 @@
-@define-color foreground rgb({foreground.rgb});
-@define-color background rgb({background.rgb});
-@define-color background-alpha rgba({background.rgb},0.8);
-@define-color accent rgba({color1.rgb}, 0.8);
-@define-color current-line rgb({color0.rgb});
-@define-color comment rgb({color4.rgb});
