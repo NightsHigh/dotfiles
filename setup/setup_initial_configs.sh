@@ -45,6 +45,7 @@ echo "Copying wallpapers..."
 cp -rf "$SCRIPT_DIR/initial_config/Wallpapers/" "$HOME"
 echo "Copied wallpapers to $HOME/Wallpapers/"
 
+rm -rf "$HOME/Wallpapers/.current"
 ln -s "$HOME/Wallpapers/default.png" "$HOME/Wallpapers/.current"
 echo "Setup complete."
 
