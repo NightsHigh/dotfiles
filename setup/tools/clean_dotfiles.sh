@@ -12,7 +12,6 @@ rm -rf "$HOME/.bashrc"
 # Config folder cleanup
 rm -rf "$HOME/.config/kitty"
 rm -rf "$HOME/.config/hypr"
-rm -rf "$HOME/.config/wal"
 rm -rf "$HOME/.config/wpg"
 rm -rf "$HOME/.config/waypaper"
 rm -rf "$HOME/.config/wlogout"
