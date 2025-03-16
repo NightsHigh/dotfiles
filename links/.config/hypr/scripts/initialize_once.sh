@@ -1,10 +1,35 @@
 #!/bin/bash
 
+
 if [ -e "$HOME/.zshrc" ]; then
     source "$HOME/dotfiles/links/.zshrc"
 elif [ -e "$HOME/.bashrc" ]; then
     source "$HOME/dotfiles/links/.bashrc"
 fi
+
+
+servers=("8.8.8.8" "1.1.1.1" "github.com")
+
+# Function to check network connectivity
+check_network() {
+    local wait_time=60  # Time in seconds before sending another message
+    local elapsed_time=0  # Counter for elapsed time
+
+    while true; do
+        for server in "${servers[@]}"; do
+            if ping -c 1 "$server" > /dev/null 2>&1; then
+                echo "Network is up! Reached $server"
+                return 0  # Return success if network is up
+            fi
+        done
+        
+        # Wait 2 seconds before retrying
+        sleep 40
+        notify-send -t 6000 "Still waiting for network connection..."
+    done
+}
+
+check_network
 
 
 # Define the path to the flag file
