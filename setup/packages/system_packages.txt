@@ -58,7 +58,6 @@ mpd
 starship
 eza
 stow
-dhcpcd
 networkmanager
 network-manager-applet
 cliphist
