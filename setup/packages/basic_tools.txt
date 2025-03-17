@@ -1,3 +1,4 @@
 discord
 vlc
 librewolf-bin
+themecord

@@ -1,4 +1,4 @@
-@theme "~/.config/rofi/themes/global_settings.rasi"
+@theme "~/.config/rofi/config.rasi"
 
 configuration {
 

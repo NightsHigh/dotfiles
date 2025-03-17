@@ -1,4 +1,4 @@
-@theme "~/.config/rofi/settings/simple-menu.rasi"
+@theme "~/.config/rofi/menues/simple-menu.rasi"
 
 entry {
   placeholder: " 📋 Search Clipboard ";

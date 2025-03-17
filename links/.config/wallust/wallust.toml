@@ -36,7 +36,7 @@ hypr.template = 'colors-hyprland.conf'
 hypr.target = '~/dotfiles/links/.config/hypr/conf/colors-hyprland.conf'
 
 rofi.template = 'colors-rofi.rasi'
-rofi.target = '~/dotfiles/links/.config/rofi/themes/colors-rofi.rasi'
+rofi.target = '~/dotfiles/links/.config/rofi/wallust/colors-rofi.rasi'
 
 waybar.template = 'colors-waybar.css'
 waybar.target = '~/dotfiles/links/.config/waybar/colors-waybar.css'
@@ -50,5 +50,5 @@ wlogout.target = '~/dotfiles/links/.config/wlogout/colors-wlogout.css'
 swaync.template = 'colors-swaync.css'
 swaync.target = '~/dotfiles/links/.config/swaync/colors-swaync.css'
 
-discord.template = 'colors-discord.css'
-discord.target = '~/.config/BetterDiscord/themes/wallust.css'
+themecord.template = "colors-discord.css"
+themecord.target = '~/.cache/wallust/discord-colors.css'

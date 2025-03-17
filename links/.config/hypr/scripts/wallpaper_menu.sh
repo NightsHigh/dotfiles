@@ -2,7 +2,7 @@
 
 notification_icon="$HOME/dotfiles/links/.config/icons/wallpaper.svg"
 wallpaper_directory="$HOME/Wallpapers"
-rofi_theme="$HOME/dotfiles/links/.config/rofi/settings/wallpaper-selector.rasi"
+rofi_theme="$HOME/dotfiles/links/.config/rofi/menues/wallpaper-selector.rasi"
 waybar_launcher="$HOME/dotfiles/links/.config/hypr/scripts/launch-waybar.sh"
 SWWW_PARAMS="--transition-fps 60 --transition-type any --transition-duration 2 --transition-bezier .43,1.19,1,.4"
 
@@ -30,6 +30,7 @@ change_wallpaper() {
     notify-send -t 6000 -i "$notification_icon" "Generating colorscheme.." "$(basename "$image")" 
 
     wallust run "$image"
+    themecord -w
 
 
     # Start waybar again

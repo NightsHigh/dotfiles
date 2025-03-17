@@ -146,7 +146,7 @@
     "custom/clipboard": {
         "format": "{icon}",
         "format-icons": "",
-        "on-click": "cliphist list | rofi -dmenu -config ~/dotfiles/links/.config/rofi/settings/clipboard-viewer.rasi -p '' | cliphist decode | wl-copy",
+        "on-click": "cliphist list | rofi -dmenu -config ~/dotfiles/links/.config/rofi/menues/clipboard-viewer.rasi -p '' | cliphist decode | wl-copy",
         "tooltip": "true",
         "tooltip-format": "Clipboard"
     },

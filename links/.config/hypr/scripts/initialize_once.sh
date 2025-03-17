@@ -54,6 +54,7 @@ bash "$HOME/dotfiles/setup/system/hyprplugin.sh"
 
 if [ -e "$HOME/.init_media_tools" ]; then
     echo "File exists."
+    bash "$HOME/dotfiles/setup/applications/vencord.sh"
     rm -rf "$HOME/.init_media_tools"
 fi
 
@@ -65,8 +66,7 @@ nwg-displays
 
 swww img "$HOME/Wallpapers/default.png" --transition-step 20 --transition-fps 60 --transition-type center
 
+rm -rf "$HOME/.initialized"
 notify-send -t 6000 "Configuration done!"
 
 # Create the flag file to indicate the script has run
-#
-touch "$FLAG_FILE"

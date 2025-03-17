@@ -1,4 +1,4 @@
-@theme "~/.config/rofi/themes/colors-rofi.rasi"
+@theme "~/.config/rofi/wallust/colors-rofi.rasi"
 
 
 configuration {
