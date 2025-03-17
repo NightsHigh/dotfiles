@@ -12,9 +12,6 @@ servers=("8.8.8.8" "1.1.1.1" "github.com")
 
 # Function to check network connectivity
 check_network() {
-    local wait_time=60  # Time in seconds before sending another message
-    local elapsed_time=0  # Counter for elapsed time
-
     while true; do
         for server in "${servers[@]}"; do
             if ping -c 1 "$server" > /dev/null 2>&1; then
@@ -36,7 +33,7 @@ check_network
 FLAG_FILE="$HOME/.initialized"
 
 # Check if the flag file exists
-if [ -e "$FLAG_FILE" ]; then
+if [ ! -e "$FLAG_FILE" ]; then
   echo "Script has already run. Exiting."
   exit 0
 fi
@@ -57,10 +54,7 @@ bash "$HOME/dotfiles/setup/system/hyprplugin.sh"
 
 if [ -e "$HOME/.init_media_tools" ]; then
     echo "File exists."
-    bash "$HOME/dotfiles/setup/applications/betterdiscord.sh"
     rm -rf "$HOME/.init_media_tools"
-else
-    echo "File does not exist."
 fi
 
 notify-send -t 6000 "Set your gtk theme!"
