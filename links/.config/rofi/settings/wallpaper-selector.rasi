@@ -1,3 +1,6 @@
+@import "~/dotfiles/links/.config/rofi/config.rasi"  
+
+/* ---- Configuration ---- */ 
 configuration {
   modi: "drun";
 }
@@ -40,9 +43,6 @@ listview {
     border:                      0px;
     children: ["scrollbar"];
 }
-
-
-
 
 /* ---- Element ---- */
 element {
