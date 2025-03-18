@@ -61,16 +61,6 @@ listview {
     border:                      0px;
 }
 
-scrollbar {
-  	border:						1px;
-  	border-radius:				10px;
-  	background-color:			transparent;
-    handle-rounded-corner:      true;
-  	handle-color: 				@active;
-  	handle-width: 				10px ;
-  	padding:      				0;
-}
-
 
 
 /* ---- Elements ---- */

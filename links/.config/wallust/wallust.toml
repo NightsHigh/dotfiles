@@ -1,11 +1,11 @@
 
 # How the image is parse, in order to get the colors:
 # full - resized - wal - thumb -  fastresize - kmeans
-backend = "fastresize"
+backend = "full"
 
 # What color space to use to produce and select the most prominent colors:
 # lab - labmixed - lch - lchmixed
-color_space = "lchmixed"
+color_space = "labmixed"
 
 # NOTE: All filters will fill 16 colors (from color0 to color15), 16 color
 #       variations are the 'ilusion' of more colors by opaquing color1 to color5.
@@ -50,5 +50,5 @@ wlogout.target = '~/dotfiles/links/.config/wlogout/colors-wlogout.css'
 swaync.template = 'colors-swaync.css'
 swaync.target = '~/dotfiles/links/.config/swaync/colors-swaync.css'
 
-themecord.template = "colors-discord.css"
-themecord.target = '~/.cache/wallust/discord-colors.css'
+discord.template = "colors-discord.css"
+discord.target = '~/.config/Vencord/themes/wallust.css'

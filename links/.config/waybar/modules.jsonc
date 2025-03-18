@@ -83,7 +83,7 @@
         "modules": [
             "battery",
             "wireplumber",
-            "backlight",
+            "custom/light",
             "custom/applauncher",
             "custom/wallpaper",
             "custom/notification-center",
@@ -117,6 +117,16 @@
         "on-scroll-down": "hyprctl hyprsunset gamma -1",
         "on-click": "pkill -x gammastep || gammastep -O 3500K",
         "tooltip-format": "On click bluefilter, gesture to change brightness"
+    },
+    "custom/light": {
+        "format": "{icon}",
+        "format-icons": [
+            " ",
+            " "
+        ],
+        "on-scroll-up": "hyprctl hyprsunset gamma +1",
+        "on-scroll-down": "hyprctl hyprsunset gamma -1",
+        "on-click": "hyprctl hyprsunset temperature 2500"
     },
     "disk": {
         "format": "<span>  {percentage_free}%</span>",
