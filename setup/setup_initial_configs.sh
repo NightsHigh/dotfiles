@@ -10,42 +10,59 @@ copy_file() {
 
     # Check if the destination is a file and remove it if necessary
     if [ -f "$dest" ]; then
-        echo "Error: A file already exists at the destination ($dest), but a directory is expected."
-        echo "Attempting to remove the conflicting file..."
-        rm -f "$dest"  # Be cautious! This deletes the file permanently
+        echo "Warning: A file already exists at the destination ($dest), removing it."
+        rm -f "$dest"  # Removes the file permanently
     fi
 
+    # Ensure the destination directory exists before copying
     mkdir -p "$(dirname "$dest")"
-    cp -f "$src" "$dest" && echo "Copied: $src to $dest"
+    if cp -f "$src" "$dest"; then
+        echo "Copied: $src to $dest"
+    else
+        echo "Error: Failed to copy $src to $dest"
+    fi
 }
 
 # Files to copy
 files=(
-    "$SCRIPT_DIR/initial_config/.config/hypr/workspaces.conf:$HOME/.config/hypr/"
-    "$SCRIPT_DIR/initial_config/.config/hypr/monitors.conf:$HOME/.config/hypr/"
-    "$SCRIPT_DIR/initial_config/.config/hypr/conf/colors-hyprland.conf:$HOME/dotfiles/links/.config/hypr/conf/"
-    "$SCRIPT_DIR/initial_config/.config/swaync/colors-swaync.css:$HOME/dotfiles/links/.config/swaync/"
-    "$SCRIPT_DIR/initial_config/.config/tofi/config:$HOME/dotfiles/links/.config/tofi/config"
-    "$SCRIPT_DIR/initial_config/.config/waybar/colors-waybar.css:$HOME/dotfiles/links/.config/waybar/"
-    "$SCRIPT_DIR/initial_config/.config/waypaper/config.ini:$HOME/dotfiles/links/.config/waypaper/"
-    "$SCRIPT_DIR/initial_config/.config/wlogout/colors-wlogout.css:$HOME/dotfiles/links/.config/wlogout/"
-    "$SCRIPT_DIR/initial_config/.config/rofi/wallust/colors-rofi.rasi:$HOME/dotfiles/links/.config/rofi/wallust/colors-rofi.rasi"
-    "$SCRIPT_DIR/initial_config/.config/kitty/colors-kitty.conf:$HOME/dotfiles/links/.config/kitty/colors-kitty.conf"
+    "$SCRIPT_DIR/initial_config/.config/hypr/workspaces.conf:$HOME/.config/hypr/workspaces.conf"
+    "$SCRIPT_DIR/initial_config/.config/hypr/monitors.conf:$HOME/.config/hypr/monitors.conf"
+    "$SCRIPT_DIR/initial_config/.config/Vencord/settings/settings.json:$HOME/.config/Vencord/settings/settings.json"
 )
 
 echo "Setting up initial configurations..."
+
 # Copy each file
 for file in "${files[@]}"; do
     IFS=":" read -r src dest <<< "$file"
-    copy_file "$src" "$dest"
+    if [ -f "$src" ]; then
+        copy_file "$src" "$dest"
+    else
+        echo "Error: Source file $src does not exist."
+    fi
 done
 
 # Copy wallpapers folder
 echo "Copying wallpapers..."
-cp -rf "$SCRIPT_DIR/initial_config/Wallpapers/" "$HOME"
-echo "Copied wallpapers to $HOME/Wallpapers/"
+if [ -d "$SCRIPT_DIR/initial_config/Wallpapers/" ]; then
+    cp -rf "$SCRIPT_DIR/initial_config/Wallpapers/" "$HOME"
+    echo "Copied wallpapers to $HOME/Wallpapers/"
+else
+    echo "Error: Wallpapers directory not found."
+fi
 
-rm -rf "$HOME/Wallpapers/.current"
+# Ensure .current symlink is set correctly
+if [ -e "$HOME/Wallpapers/.current" ]; then
+    rm -f "$HOME/Wallpapers/.current"
+fi
 ln -s "$HOME/Wallpapers/default.png" "$HOME/Wallpapers/.current"
+
+# Run wallust if available to generate themes
+if command -v wallust >/dev/null 2>&1; then
+    wallust run "$HOME/Wallpapers/default.png"
+else
+    echo "wallust command not found, skipping wallpaper setup."
+fi
+
 echo "Setup complete."
 
