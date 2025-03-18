@@ -52,3 +52,6 @@ swaync.target = '~/dotfiles/links/.config/swaync/colors-swaync.css'
 
 discord.template = "colors-discord.css"
 discord.target = '~/.config/Vencord/themes/wallust.css'
+
+colors-json.template = 'colors.json'
+colors-json.target = '~/.cache/wallust/colors.json'
