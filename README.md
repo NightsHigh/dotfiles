@@ -3,7 +3,7 @@
 My dotfile configuration for Arch Linux and Hyprland.
 
 ![Desktop Screenshot](https://raw.githubusercontent.com/eske4/dotfiles/main/images/desktop.png)
-![App Launcher Screenshot](https://raw.githubusercontent.com/eske4/dotfiles/main/images/app_launcher.png)
+![App Launcher Screenshot](https://raw.githubusercontent.com/eske4/dotfiles/main/images/app-launcher.png)
 ![Wallpaper Menu Screenshot](https://raw.githubusercontent.com/eske4/dotfiles/main/images/wallpaper_menu.png)
 ![Command Viewer Screenshot](https://raw.githubusercontent.com/eske4/dotfiles/main/images/command_viewer.png)
 
