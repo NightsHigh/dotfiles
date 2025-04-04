@@ -1,17 +1,19 @@
 [user]
+    name = eske
 	email = eske.larsen@gmail.com
-	name = eske4
+	username = eske4
 
 [commit]
 	template = ~/dotfiles/links/.gitmessage
 
+[core]
+	editor = nvim
 
 [rebase]
     autoSquash = true       # Automatically squash commits with 'fixup!' or 'squash!' during rebase
     stat = true               # Show diff stats during rebase
     autoStash = true          # Automatically stash changes before rebase, and apply afterward
-    interactive = vim         # Use Vim for interactive rebase
-
+    interactive = nvim         # Use Vim for interactive rebase
 
 [pull]
     rebase = true             # Always use rebase instead of merge when pulling (for a cleaner history)
