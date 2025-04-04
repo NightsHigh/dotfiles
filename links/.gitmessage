@@ -1,0 +1,13 @@
+Title (50 characters or less):
+# A brief summary of the change or fix. Use the imperative mood (e.g., "Fix bug", "Add feature").
+
+Description:
+# A detailed explanation of the change, why it was made, and how it affects the project.
+
+Related Issues / PRs (optional):
+None
+# If applicable, list any related issue IDs, tickets, or pull requests. Example: "Closes #42".
+
+BREAKING CHANGE (if applicable):
+None
+# If this commit introduces a breaking change, describe it here and how users should handle it.

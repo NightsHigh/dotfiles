@@ -32,8 +32,6 @@ change_wallpaper() {
     notify-send -t 6000 -i "$notification_icon" "Generating colorscheme.." "$(basename "$image")" 
 
     wallust run "$image"
-    themecord -w
-
 
     # Start waybar again
     bash "$waybar_launcher" &

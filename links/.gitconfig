@@ -1,0 +1,40 @@
+[user]
+	email = eske.larsen@gmail.com
+	name = eske4
+[credential]
+	helper = store
+
+[commit]
+	template = ~/dotfiles/links/.gitmessage
+
+
+[rebase]
+    autoSquash = always       # Automatically squash commits with 'fixup!' or 'squash!' during rebase
+    stat = true               # Show diff stats during rebase
+    autoStash = true          # Automatically stash changes before rebase, and apply afterward
+    interactive = vim         # Use Vim for interactive rebase
+
+
+[pull]
+    rebase = true             # Always use rebase instead of merge when pulling (for a cleaner history)
+
+[color]
+    ui = auto                 # Enable colored output in Git commands (status, diff, etc.)
+
+[alias]
+    list = branch -a
+    wt = worktree
+    wt-list = worktree list
+    wt-add-branch = !~/dotfiles/links/.gitcommand/git-wt-add.sh
+    wt-clone-branch = !~/dotfiles/links/.gitcommand/git-wt-clone-branch.sh
+    wt-clone = !~/dotfiles/links/.gitcommand/git-wt-clone.sh
+    wt-init = !~/dotfiles/links/.gitcommand/git-wt-init.sh
+    wt-prune = worktree prune
+    wt-rm = "!f() { \
+        git worktree remove --force \"$1\"; \
+        git branch -D \"$1\" 2>/dev/null; \
+        git worktree prune; \
+    }; f"
+
+[push]
+	autoSetupRemote = true

@@ -1,0 +1,4 @@
+Copy initial config
+Systemd etc settings script
+nvidia script
+
