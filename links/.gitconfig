@@ -7,7 +7,7 @@
 
 
 [rebase]
-    autoSquash = always       # Automatically squash commits with 'fixup!' or 'squash!' during rebase
+    autoSquash = true       # Automatically squash commits with 'fixup!' or 'squash!' during rebase
     stat = true               # Show diff stats during rebase
     autoStash = true          # Automatically stash changes before rebase, and apply afterward
     interactive = vim         # Use Vim for interactive rebase
