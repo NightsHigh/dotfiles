@@ -19,5 +19,6 @@ fi
 git worktree remove --force "$BRANCH_NAME" || { echo "Failed to remove worktree."; exit 1; }
 git branch -D "$BRANCH_NAME" 2>/dev/null || { echo "Failed to delete branch."; exit 1; }
 git worktree prune
+git fetch origin
 
 echo "Branch '$BRANCH_NAME' and associated worktree removed locally."
