@@ -17,17 +17,21 @@ echo "Repository root directory: $REPO_DIR"
 REPO_URL=$(git config --get remote.origin.url)
 
 # Fetch the available branches from the remote repository
-branches=$(git ls-remote --heads "$REPO_URL" | awk '{print $2}' | sed 's|refs/heads/||')
-
+branches=($(git ls-remote --heads "$REPO_URL" | awk '{print $2}' | sed 's|refs/heads/||'))
 # Check if there are branches available
-if [ -z "$branches" ]; then
+if [ ${#branches[@]} -eq 0 ]; then
     echo "No branches found in the remote repository."
     exit 1
 fi
 
+num_branches=${#branches[@]}
+PS3="Please choose a branch to work with (1-$num_branches): "
+echo "Number of branches: $num_branches"
+
+
 # Prompt the user to select a branch
 echo "Select a branch to work with:"
-select branch in $branches; do
+select branch in "${branches[@]}"; do
     if [ -n "$branch" ]; then
         echo "You have selected branch: $branch"
         break

@@ -1,8 +1,6 @@
 [user]
 	email = eske.larsen@gmail.com
 	name = eske4
-[credential]
-	helper = store
 
 [commit]
 	template = ~/dotfiles/links/.gitmessage
@@ -23,6 +21,7 @@
 
 [alias]
     list = branch -a
+    cleanup-branch = !~/dotfiles/links/.gitcommand/git-cleanup-branch.sh     
     wt = worktree
     wt-list = worktree list
     wt-add-branch = !~/dotfiles/links/.gitcommand/git-wt-add.sh
@@ -38,3 +37,6 @@
 
 [push]
 	autoSetupRemote = true
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
