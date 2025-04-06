@@ -11,7 +11,7 @@ while [ ! -d "$REPO_DIR/.git" ]; do
 done
 
 # Define the features directory path where the worktree will be located
-FEATURES_DIR="$REPO_DIR/features"
+BRANCH_DIR="$REPO_DIR"
 
 # List remote branches
 echo "Fetching branches for $REPO_URL..."
@@ -42,17 +42,17 @@ done
 echo "Enter the new branch name:"
 read branch_name
 
-git worktree add -b "$branch_name" "$FEATURES_DIR/$branch_name" "$base_branch"
+git worktree add -b "$branch_name" "$BRANCH_DIR/$branch_name" "$base_branch"
 
 read -p "Do you want to push '$branch_name' to Git? (y/n) " upload_choice
 
 if [[ "$upload_choice" =~ ^[Yy]$ ]]; then
-    git -C "$FEATURES_DIR/$branch_name" push --set-upstream origin "$branch_name"
+    git -C "$BRANCH_DIR/$branch_name" push --set-upstream origin "$branch_name"
     echo "✅ Branch '$branch_name' has been pushed to remote!"
 else
     echo "⏳ Skipping upload. You can push later using:"
-    echo "   git -C \"$FEATURES_DIR/$branch_name\" push --set-upstream origin \"$branch_name\""
+    echo "   git -C \"$BRANCH_DIR/$branch_name\" push --set-upstream origin \"$branch_name\""
 fi
 
-echo "Worktree for branch '$branch_name' has been created at $FEATURES_DIR/$branch_name"
+echo "Worktree for branch '$branch_name' has been created at $BRANCH_DIR/$branch_name"
 

@@ -12,10 +12,10 @@ REPO_URL_OR_NAME=$1
 REPO_NAME=$(basename "$REPO_URL_OR_NAME" .git)
 REPO_DIR="$CURRENT_DIR/$REPO_NAME"
 GIT_DIR="$REPO_DIR/.git"
-FEATURES_DIR="$REPO_DIR/features"
+BRANCH_DIR="$REPO_DIR"
 
 # Create the necessary directories
-mkdir -p "$REPO_DIR" "$GIT_DIR" "$FEATURES_DIR"
+mkdir -p "$REPO_DIR" "$GIT_DIR" "$BRANCH_DIR"
 
 # Initialize the bare Git repository
 git init --bare "$GIT_DIR"
@@ -25,10 +25,10 @@ git --git-dir="$GIT_DIR" symbolic-ref HEAD refs/heads/main
 
 # Create the main worktree
 echo "Setting up the main branch..."
-git --git-dir="$GIT_DIR" worktree add "$FEATURES_DIR/main" -b main
+git --git-dir="$GIT_DIR" worktree add "$BRANCH_DIR/main" -b main
 
 # Move into the worktree and make an initial commit
-cd "$FEATURES_DIR/main"
+cd "$BRANCH_DIR/main"
 touch README.md
 git add README.md
 git commit -m "Initial commit"
@@ -46,7 +46,7 @@ else
     echo "You can now create and manage branches in the 'features' directory."
 fi
 
-echo "Worktree setup complete at $FEATURES_DIR."
+echo "Worktree setup complete at $BRANCH_DIR."
 echo "You can now start creating new branches in the 'features' folder."
 
 

@@ -41,11 +41,11 @@ select branch in "${branches[@]}"; do
 done
 
 # Define the features directory path where the worktree for the branch will be located
-FEATURES_DIR="$REPO_DIR/features"
-WORKTREE_DIR="$FEATURES_DIR/$branch"
+BRANCH_DIR="$REPO_DIR"
+WORKTREE_DIR="$BRANCH_DIR/$branch"
 
 # Create the features directory if it doesn't exist
-mkdir -p "$FEATURES_DIR"
+mkdir -p "$BRANCH_DIR"
 
 # Check if the worktree already exists for the selected branch
 if [ -d "$WORKTREE_DIR" ]; then

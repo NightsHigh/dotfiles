@@ -1,10 +1,15 @@
 #!/bin/bash
 
 # Ensure we are in a git repository
-if [ ! -d ".git" ]; then
-    echo "This is not a git repository. Please navigate to a repository."
-    exit 1
-fi
+REPO_DIR=$(pwd)
+while [ ! -d "$REPO_DIR/.git" ]; do
+    REPO_DIR=$(dirname "$REPO_DIR")
+    if [ "$REPO_DIR" == "/" ]; then
+        echo "Error: Could not find the root of the Git repository."
+        exit 1
+    fi
+done
+
 
 # Prompt for the remote repository URL (if you have a specific one)
 REPO_URL=$(git config --get remote.origin.url)

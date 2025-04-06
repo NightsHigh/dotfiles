@@ -12,7 +12,7 @@ REPO_NAME=$(basename "$REPO_URL" .git)  # Get the repo name, stripping .git suff
 CURRENT_DIR=$(pwd)
 # Directory where the bare repository and worktrees will be stored
 BASE_DIR="$CURRENT_DIR/$REPO_NAME"
-FEATURES_DIR="$BASE_DIR/features"
+BRANCH_DIR="$BASE_DIR"
 GIT_DIR="$BASE_DIR/.git"
 
 # Clone the repository as a bare repo (initialize .git in the base dir)
@@ -47,7 +47,7 @@ done
 
 
 # Define the worktree directory for the selected branch
-WORKTREE_DIR="$FEATURES_DIR/$branch"
+WORKTREE_DIR="$BRANCH_DIR/$branch"
 
 # Check if the worktree already exists for the selected branch
 if [ -d "$WORKTREE_DIR" ]; then
@@ -58,6 +58,8 @@ else
     echo "Creating worktree for branch '$branch' at: $WORKTREE_DIR"
     git --git-dir="$GIT_DIR" worktree add "$WORKTREE_DIR" "$branch"
 fi
+
+git --git-dir="$GIT_DIR" config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 
 # Output path where worktree is located
 echo "Worktree for branch '$branch' is set up at: $WORKTREE_DIR"
