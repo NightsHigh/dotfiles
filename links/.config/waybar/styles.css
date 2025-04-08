@@ -22,12 +22,11 @@ button {
 * {
   font-family:
     FiraCode Nerd Font,
-    FontAwesome6Free;
+    "Font Awesome 6 Free";
   font-weight: 200;
   font-size: 14px;
   color: @fg;
 }
-
 /* GTK Menu styles */
 menu,
 menuitem,

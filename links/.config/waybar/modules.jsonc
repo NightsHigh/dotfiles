@@ -79,13 +79,13 @@
         "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-            "1": "1 ",
-            "2": "2 ",
-            "3": "3 ",
-            "4": "4 ",
-            "5": "5 ",
-            "6": "6 ",
-            "7": "7 "
+            "1": "1  ",
+            "2": "2  ",
+            "3": "3  ",
+            "4": "4  ",
+            "5": "5  ",
+            "6": "6  ",
+            "7": "7  "
         }
     },
     "group/tray-group": {
@@ -119,8 +119,8 @@
     "backlight": {
         "format": "{icon}{percent}%",
         "format-icons": [
-            " ",
-            " "
+            "",
+            ""
         ],
         "tooltip": true,
         "on-scroll-up": "hyprctl hyprsunset gamma +1",
@@ -131,8 +131,8 @@
     "custom/light": {
         "format": "{icon}",
         "format-icons": [
-            " ",
-            " "
+            "",
+            ""
         ],
         "on-scroll-up": "hyprctl hyprsunset gamma +1",
         "on-scroll-down": "hyprctl hyprsunset gamma -1",
