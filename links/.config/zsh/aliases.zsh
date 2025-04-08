@@ -14,6 +14,8 @@ alias fgrep='fgrep --color=auto'
 alias cp="cp -i"  # Prompt before overwriting files during copy
 alias mv="mv -i"  # Prompt before overwriting files during move
 alias rm="rm -i"  # Prompt before deleting files
+alias rmdir="rm -rf"
+
 
 # === Disk & System Info ===
 # Display disk usage in human-readable format (e.g., GB, MB)

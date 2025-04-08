@@ -76,7 +76,15 @@
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "on-click": "activate"
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1 ",
+            "2": "2 ",
+            "3": "3 ",
+            "4": "4 ",
+            "5": "5 "
+        }
     },
     "group/tray-group": {
         "orientation": "horizontal",
