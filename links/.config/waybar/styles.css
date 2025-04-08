@@ -54,26 +54,25 @@ window#waybar {
 .modules-left,
 .modules-right,
 .modules-center {
-  background-color: @bg;
   margin: 0;
 }
 
 .modules-left {
-  border-radius: 4px 4px 15px 15px;
+  border-radius: 0px 4px 15px 15px;
   padding: 0px 4px;
   border: 0.5px solid @fg;
+  background-color: @bg;
 }
 
 .modules-right {
   border-radius: 4px 0 15px 15px;
   padding: 0px 4px;
   border: 0.5px solid @fg;
+  background-color: @bg;
 }
 
 .modules-center {
-  border-radius: 4px 4px 15px 15px;
   padding: 0px 4px;
-  border: 0.5px solid @fg;
 }
 
 /* Tooltips */
@@ -126,16 +125,19 @@ tooltip {
 
 /* Taskbar */
 #taskbar {
-  background: transparent;
+  border-radius: 4px 4px 15px 15px;
+  background: @bg;
+  padding: 1px 4px;
+  border: 0.5px solid @fg;
 }
 
 #taskbar button {
-  padding: 0px 8px;
+  padding: 0px 6px;
   margin: 4px 0px;
 }
 
 #taskbar button:first-child {
-  border-radius: 4px 0 0 15px;
+  border-radius: 4px 0px 0px 15px;
 }
 
 #taskbar button:last-child {
@@ -160,6 +162,7 @@ tooltip {
 #taskbar.empty {
   background: transparent;
   background-color: transparent;
+  border: 0px solid @fg;
 }
 
 /* Individual modules */
