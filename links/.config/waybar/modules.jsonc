@@ -93,7 +93,8 @@
         "modules": [
             "battery",
             "wireplumber",
-            "custom/light",
+            "backlight",
+            "custom/bluefilter",
             "custom/applauncher",
             "custom/wallpaper",
             "custom/notification-center",
@@ -123,20 +124,13 @@
             ""
         ],
         "tooltip": true,
-        "on-scroll-up": "hyprctl hyprsunset gamma +1",
-        "on-scroll-down": "hyprctl hyprsunset gamma -1",
-        "on-click": "pkill -x gammastep || gammastep -O 3500K",
-        "tooltip-format": "On click bluefilter, gesture to change brightness"
+        "on-scroll-up": "brightnessctl s 1%",
+        "on-scroll-down": "brightnessctl s 1%-",
+        "tooltip-format": "Adjust brightness"
     },
-    "custom/light": {
-        "format": "{icon}",
-        "format-icons": [
-            "",
-            ""
-        ],
-        "on-scroll-up": "hyprctl hyprsunset gamma +1",
-        "on-scroll-down": "hyprctl hyprsunset gamma -1",
-        "on-click": "hyprctl hyprsunset temperature 2500"
+    "custom/bluefilter": {
+        "format": "",
+        "on-click": "pkill -x gammastep || gammastep -O 3500K"
     },
     "disk": {
         "format": "<span>  {percentage_free}%</span>",

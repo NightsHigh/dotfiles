@@ -11,7 +11,6 @@ cmake
 cpio
 hyprland-git
 hyprpolkitagent-git
-hyprsunset-git
 hyprlock-git
 hypridle-git
 wlogout
@@ -70,3 +69,5 @@ p7zip
 p7zip-gui
 breeze-icons
 rofi-wayland
+brightnessctl
+gammastep
