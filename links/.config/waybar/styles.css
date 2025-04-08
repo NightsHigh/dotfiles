@@ -41,6 +41,20 @@ menuitem:hover,
 menuitem:checked,
 menuitem:active {
   background-color: @accent;
+  color: @bgc;
+}
+
+menuitem:hover label,
+menuitem:checked label,
+menuitem:active label {
+  color: @bgc;
+}
+
+menuitem.header label,
+menuitem:disabled label {
+  font-size: 16px;
+  font-weight: bold;
+  color: @fg;
 }
 
 /* Waybar styles */
