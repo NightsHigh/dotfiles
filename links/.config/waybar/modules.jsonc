@@ -124,7 +124,7 @@
             ""
         ],
         "tooltip": true,
-        "on-scroll-up": "brightnessctl s 1%",
+        "on-scroll-up": "brightnessctl s 1%+",
         "on-scroll-down": "brightnessctl s 1%-",
         "tooltip-format": "Adjust brightness"
     },
