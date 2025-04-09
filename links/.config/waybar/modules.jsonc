@@ -130,7 +130,8 @@
     },
     "custom/bluefilter": {
         "format": "",
-        "on-click": "pkill -x gammastep || gammastep -O 3500K"
+        "on-click": "pkill -x gammastep || gammastep -O 3500K",
+        "tooltip-format": "Toggle bluefilter"
     },
     "disk": {
         "format": "<span>  {percentage_free}%</span>",
