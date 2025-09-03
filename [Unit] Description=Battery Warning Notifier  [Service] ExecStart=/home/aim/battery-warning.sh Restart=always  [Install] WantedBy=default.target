@@ -1,0 +1,9 @@
+[Unit]
+Description=Battery Warning Notifier
+
+[Service]
+ExecStart=/home/aim/battery-warning.sh
+Restart=always
+
+[Install]
+WantedBy=default.target
