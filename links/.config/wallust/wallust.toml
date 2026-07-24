@@ -35,6 +35,9 @@ threshold = 11
 hypr.template = 'colors-hyprland.conf'
 hypr.target = '~/dotfiles/links/.config/hypr/conf/colors-hyprland.conf'
 
+hypr-lua.template = 'colors-hyprland.lua'
+hypr-lua.target = '~/dotfiles/links/.config/hypr/conf/colors-hyprland.lua'
+
 rofi.template = 'colors-rofi.rasi'
 rofi.target = '~/dotfiles/links/.config/rofi/wallust/colors-rofi.rasi'
 

@@ -1,0 +1,6 @@
+-- ~/.config/hypr/monitors.lua  (machine-specific)
+--
+-- CAVEAT: nwg-displays writes monitors.CONF (classic syntax), not .lua, and the
+-- Lua loader reads THIS file. After running nwg-displays, port its output here:
+--   hl.config({ monitor = { "DP-1,2560x1440@144,0x0,1", "eDP-1,preferred,auto,1" } })
+-- Empty = Hyprland auto-detects all monitors (preferred mode, auto position).

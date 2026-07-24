@@ -5,6 +5,7 @@ links/.config/waybar/colors-waybar.css
 links/.config/waypaper/config.ini
 links/.config/wlogout/colors-wlogout.css
 links/.config/hypr/conf/colors-hyprland.conf
+links/.config/hypr/conf/colors-hyprland.lua
 links/.config/hypr/monitors.conf
 links/.config/hypr/workspaces.conf
 links/.config/tofi/config

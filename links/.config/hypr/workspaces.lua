@@ -1,0 +1,3 @@
+-- ~/.config/hypr/workspaces.lua  (machine-specific)
+-- Empty by default. Bind workspaces to monitors here if needed, e.g.:
+--   hl.workspace({ id = 1, monitor = "DP-1", default = true })
