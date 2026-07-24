@@ -39,7 +39,7 @@ if [ ! -e "$FLAG_FILE" ]; then
 fi
 
 
-swww img "$HOME/Wallpapers/default.png" --transition-step 20 --transition-fps 60 --transition-type center
+awww img "$HOME/Wallpapers/default.png" --transition-step 20 --transition-fps 60 --transition-type center
 sleep 2
 
 # Wait until Hyprland is running
@@ -64,7 +64,7 @@ nwg-look
 notify-send -t 6000 "Configure your monitor"
 nwg-displays
 
-swww img "$HOME/Wallpapers/default.png" --transition-step 20 --transition-fps 60 --transition-type center
+awww img "$HOME/Wallpapers/default.png" --transition-step 20 --transition-fps 60 --transition-type center
 
 rm -rf "$HOME/.initialized"
 notify-send -t 6000 "Configuration done!"

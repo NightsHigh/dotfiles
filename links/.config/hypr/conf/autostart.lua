@@ -11,7 +11,7 @@ hl.on("hyprland.start", function()
 	-- Tray applications
 	hl.exec_cmd("nm-applet &")
 	hl.exec_cmd("blueman-applet &")
-	hl.exec_cmd("swww-daemon")
+	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd("~/dotfiles/links/.config/hypr/scripts/launch-waybar.sh")
 
 	-- Clipboard
