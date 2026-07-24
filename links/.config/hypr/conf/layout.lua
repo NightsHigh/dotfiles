@@ -2,7 +2,6 @@
 
 hl.config({
 	dwindle = {
-		pseudotile = true, -- toggled by SUPER + P in keybindings
 		preserve_split = true, -- you probably want this
 	},
 
