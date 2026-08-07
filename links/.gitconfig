@@ -1,7 +1,7 @@
 [user]
-    name = eske
-	email = eske.larsen@gmail.com
-	username = eske4
+    name = NightsHigh
+	email = soren913@gmail.com
+	username = NightsHigh
 
 [commit]
 	template = ~/dotfiles/links/.gitmessage
