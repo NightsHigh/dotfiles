@@ -22,3 +22,4 @@ pango
 gdk-pixbuf2
 cairo
 cursor-bin
+github-cli
