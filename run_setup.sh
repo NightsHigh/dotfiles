@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Check if the script is being run as root
 if [ "$(id -u)" -eq 0 ]; then
@@ -47,7 +48,7 @@ install_nvidia() {
 
 install_media_tools() {
     echo "Installing basic tools (VLC, Discord etc)"
-    bash "$SCRIPT_DIR/setup/tools/install_packages.sh" pacman "$SCRIPT_DIR/setup/packages/basic_tools.txt"    
+    bash "$SCRIPT_DIR/setup/tools/install_packages.sh" yay "$SCRIPT_DIR/setup/packages/basic_tools.txt"    
     touch "$HOME/.init_media_tools"
 }
 
@@ -67,15 +68,16 @@ ask_boolean_question() {
 echo "Welcome! Let's configure your system."
 
 # Ask questions and store boolean responses directly
-if ask_boolean_question "Do you have an nvidia graphics card?"; then nvidia_drivers=0; else dev_tools=1; fi
+if ask_boolean_question "Do you have an nvidia graphics card?"; then nvidia_drivers=0; else nvidia_drivers=1; fi
 if ask_boolean_question "Do you want to install development tools?"; then dev_tools=0; else dev_tools=1; fi
 if ask_boolean_question "Do you want to prepare your system for gaming?"; then gaming_tools=0; else gaming_tools=1; fi
 if ask_boolean_question "Do you want to install media tools?"; then media_tools=0; else media_tools=1; fi
 
 # Update system and install basic packages (needed for other scripts)
 echo "Updating system and installing essential packages..."
-sudo pacman -Syu --noconfirm > /dev/null 2>&1 || echo "Error: Failedf to synchronize pacman"  # Update package database
-bash "$SCRIPT_DIR/setup/tools/install_packages.sh" pacman git wget curl zip unzip rustup
+sudo sed -i '/^#\[multilib\]/,/^#Include/ s/^#//' /etc/pacman.conf
+sudo pacman -Syu --noconfirm || echo "Error: Failedf to synchronize pacman"  # Update package database
+bash "$SCRIPT_DIR/setup/tools/install_packages.sh" pacman git wget curl zip unzip rustup base-devel linux-headers
 bash "$SCRIPT_DIR/setup/install/install_yay.sh"
 
 # Ensure Rust is properly set up
@@ -83,6 +85,7 @@ bash "$SCRIPT_DIR/setup/install/install_yay.sh"
 echo "Setting up Rust toolchains..."
 rustup install stable > /dev/null 2>&1 || echo "Error: Failed to install stable toolchain."
 rustup install nightly > /dev/null 2>&1 || echo "Error: Failed to install stable toolchain"
+cargo install wallust --locked
 
 # Conditionally install based on the user's responses
 

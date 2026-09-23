@@ -17,7 +17,7 @@ libsigc++
 nodejs
 npm
 
-libgtk-3-dev
+gtk3
 pango
 gdk-pixbuf2
 cairo

@@ -47,7 +47,6 @@ gtkmm3
 libappindicator-gtk3
 libdbusmenu-gtk3
 arc-gtk-theme
-wallust
 dolphin
 gnome-disk-utility
 upower

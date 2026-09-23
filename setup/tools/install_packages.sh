@@ -14,7 +14,7 @@ check_if_comment() {
 install_package_pacman() {
     local package=$1
     echo -n "Installing package: $package ..."
-    sudo pacman -S --noconfirm "$package" > /dev/null 2>&1
+    sudo pacman -S --noconfirm "$package" > /dev/null
     if [ $? -eq 0 ]; then
         echo -e "\e[32m[OK]\e[0m"
     else
@@ -26,7 +26,7 @@ install_package_pacman() {
 install_package_yay() {
     local package=$1
     echo -n "Installing package: $package ..."
-    yay -S --noconfirm "$package" > /dev/null 2>&1
+    yay -S --noconfirm "$package" > /dev/null
     if [ $? -eq 0 ]; then
         echo -e "\e[32m[OK]\e[0m"
     else
@@ -59,6 +59,7 @@ shift  # Shift arguments to process either a file or package list
 if [ -f "$1" ]; then
     PACKAGE_LIST="$1"
     while IFS= read -r package; do
+        package="${package//[[:space:]]/}"
         # Ignore empty lines
         if [ -z "$package" ]; then
             continue

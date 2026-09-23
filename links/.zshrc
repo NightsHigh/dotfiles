@@ -8,7 +8,6 @@ plug "$HOME/dotfiles/links/.config/zsh/aliases.zsh"
 plug "$HOME/dotfiles/links/.config/zsh/exports.zsh"
 
 plug "zsh-users/zsh-autosuggestions"
-plug "esc/conda-zsh-completion"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/zap-prompt"
 plug "MichaelAquilina/zsh-you-should-use"
@@ -25,3 +24,4 @@ plug "leophys/zsh-plugin-fzf-finder"
 autoload -Uz compinit
 
 eval "$(starship init zsh)"
+export PATH="$HOME/.cargo/bin:$PATH"
