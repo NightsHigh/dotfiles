@@ -72,3 +72,4 @@ brightnessctl
 gammastep
 jq
 wtype
+hyprsunset
