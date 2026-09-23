@@ -117,6 +117,7 @@ bash "$SCRIPT_DIR/setup/setup_initial_configs.sh"
 
 # Stop the sudo refresh process
 kill $SUDO_PID
+sed -i '/^kill \$SUDO_PID/i gh auth login' run_setup.sh
 echo "All done! Your system is now configured. Press any key to reboot"
 read -n 1 -s -r 
 reboot
