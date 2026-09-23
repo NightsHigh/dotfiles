@@ -3,3 +3,6 @@ vlc
 wtype
 librewolf-bin
 themecord
+firefox
+brave-bin
+nordvpn-bin

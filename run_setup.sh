@@ -49,6 +49,8 @@ install_nvidia() {
 install_media_tools() {
     echo "Installing basic tools (VLC, Discord etc)"
     bash "$SCRIPT_DIR/setup/tools/install_packages.sh" yay "$SCRIPT_DIR/setup/packages/basic_tools.txt"    
+    sudo systemctl enable nordvpnd
+    sudo usermod -aG nordvpn "$USER"
     touch "$HOME/.init_media_tools"
 }
 

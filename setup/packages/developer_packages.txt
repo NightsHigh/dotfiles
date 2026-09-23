@@ -21,3 +21,4 @@ gtk3
 pango
 gdk-pixbuf2
 cairo
+cursor-bin
