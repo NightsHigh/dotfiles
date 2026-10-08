@@ -77,8 +77,9 @@ hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = "10" }))
 hl.bind(mainMod .. " + LEFT", hl.dsp.workspace.move({ monitor = "l" }))
 hl.bind(mainMod .. " + RIGHT", hl.dsp.workspace.move({ monitor = "r" }))
 
--- Jump focus + cursor to the other monitor (also frees the mouse from games that lock it)
-hl.bind(mainMod .. " + M", hl.dsp.focus({ monitor = "+1" }))
+-- Jump focus + cursor to the other monitor (also frees the mouse from games that lock it).
+-- dont_inhibit: still fires when a game/Wine blocks compositor shortcuts.
+hl.bind(mainMod .. " + M", hl.dsp.focus({ monitor = "+1" }), { dont_inhibit = true })
 
 -- Special workspaces (scratchpad)
 hl.bind(mainMod .. " + D", hl.dsp.workspace.toggle_special("magic"))
