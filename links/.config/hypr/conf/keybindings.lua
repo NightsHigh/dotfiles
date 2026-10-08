@@ -24,8 +24,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
--- togglesplit (dwindle): no confirmed hl.dsp mapping — routed via hyprctl to be safe.
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprctl dispatch togglesplit"))
+hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind("CONTROL + ALT + DELETE", hl.dsp.exec_cmd("missioncenter"))
 
 -- NOTE: your old config bound SUPER + B twice (firefox above AND launch-waybar
@@ -78,6 +77,9 @@ hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = "10" }))
 hl.bind(mainMod .. " + LEFT", hl.dsp.workspace.move({ monitor = "l" }))
 hl.bind(mainMod .. " + RIGHT", hl.dsp.workspace.move({ monitor = "r" }))
 
+-- Jump focus + cursor to the other monitor (also frees the mouse from games that lock it)
+hl.bind(mainMod .. " + M", hl.dsp.focus({ monitor = "+1" }))
+
 -- Special workspaces (scratchpad)
 hl.bind(mainMod .. " + D", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "special:magic" }))
@@ -91,8 +93,8 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Expo / window switcher
--- hyprexpo is a plugin dispatcher — routed via hyprctl (no confirmed hl.dsp entry).
-hl.bind(mainMod .. " + tab", hl.dsp.exec_cmd("hyprctl dispatch hyprexpo:expo toggle"))
+-- hyprexpo was dropped from hyprland-plugins (May 2026), so SUPER + tab is free.
+-- hl.bind(mainMod .. " + tab", hl.dsp.exec_cmd("hyprctl dispatch hyprexpo:expo toggle"))
 hl.bind("ALT + tab", hl.dsp.exec_cmd(window_switcher))
 
 -- Resize active window with mainMod + SHIFT + vim keys (binde -> repeating)

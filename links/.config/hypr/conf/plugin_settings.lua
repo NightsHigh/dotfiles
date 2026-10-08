@@ -1,37 +1,51 @@
 -- ~/.config/hypr/conf/plugin_settings.lua
--- hyprbars + hyprexpo settings.
+-- hyprbars settings.
 --
--- Applied via `hyprctl keyword` on startup instead of hl.config: plugin
--- keywords register into Hyprland's classic parser, which the Lua config API
--- does not reach. This runs after plugins load and is the reliable channel.
--- Harmless (just prints an error) if a plugin isn't installed.
+-- hyprpm isn't available with hyprland-git, so hyprbars is built by hand from
+-- https://github.com/hyprwm/hyprland-plugins (pick the commit matching the
+-- Hyprland build date) and copied to ~/.local/lib/hyprland/hyprbars.so.
+-- Rebuild it after every Hyprland update; a stale build refuses to load.
+--
+-- hyprexpo was dropped upstream (May 2026) and no longer exists.
 
 local colors = require("conf.colors")
 
-hl.on("hyprland.start", function()
-	-- hyprbars
-	hl.exec_cmd("hyprctl keyword plugin:hyprbars:bar_height 35")
-	hl.exec_cmd("hyprctl keyword plugin:hyprbars:bar_color " .. colors.background_str)
-	hl.exec_cmd("hyprctl keyword plugin:hyprbars:col.text " .. colors.foreground_str)
-	hl.exec_cmd("hyprctl keyword plugin:hyprbars:bar_text_font FiraCode")
-	hl.exec_cmd("hyprctl keyword plugin:hyprbars:bar_text_size 12")
-	hl.exec_cmd(
-		'hyprctl keyword plugin:hyprbars:hyprbars-button "'
-			.. colors.color9_str
-			.. ', 15, 󰖭, hyprctl dispatch killactive"'
-	)
-	hl.exec_cmd(
-		'hyprctl keyword plugin:hyprbars:hyprbars-button "'
-			.. colors.color5_str
-			.. ', 15, , hyprctl dispatch fullscreen 1"'
-	)
+local hyprbars_so = os.getenv("HOME") .. "/.local/lib/hyprland/hyprbars.so"
 
-	-- hyprexpo
-	hl.exec_cmd("hyprctl keyword plugin:hyprexpo:columns 3")
-	hl.exec_cmd("hyprctl keyword plugin:hyprexpo:gap_size 5")
-	hl.exec_cmd("hyprctl keyword plugin:hyprexpo:bg_col " .. colors.background_str)
-	hl.exec_cmd('hyprctl keyword plugin:hyprexpo:workspace_method "center current"')
-	hl.exec_cmd("hyprctl keyword plugin:hyprexpo:enable_gesture true")
-	hl.exec_cmd("hyprctl keyword plugin:hyprexpo:gesture_distance 300")
-	hl.exec_cmd("hyprctl keyword plugin:hyprexpo:gesture_positive true")
-end)
+local f = io.open(hyprbars_so, "r")
+if f then
+	f:close()
+	pcall(hl.plugin.load, hyprbars_so)
+end
+
+-- Only configure if the plugin actually loaded, so a missing/stale build
+-- doesn't break the rest of the config.
+if hl.plugin.hyprbars then
+	hl.config({
+		plugin = {
+			hyprbars = {
+				bar_height = 35,
+				bar_color = colors.background_str,
+				["col.text"] = colors.foreground_str,
+				bar_text_font = "FiraCode",
+				bar_text_size = 12,
+			},
+		},
+	})
+
+	-- Buttons (right -> left)
+	hl.plugin.hyprbars.add_button({
+		bg_color = colors.color9_str,
+		fg_color = colors.foreground_str,
+		size = 15,
+		icon = "󰖭",
+		action = "hyprctl dispatch 'hl.dsp.window.close()'",
+	})
+	hl.plugin.hyprbars.add_button({
+		bg_color = colors.color5_str,
+		fg_color = colors.foreground_str,
+		size = 15,
+		icon = "",
+		action = [[hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })']],
+	})
+end

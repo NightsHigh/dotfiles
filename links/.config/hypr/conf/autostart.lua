@@ -25,4 +25,7 @@ hl.on("hyprland.start", function()
 
 	-- Initialization
 	hl.exec_cmd("~/dotfiles/links/.config/hypr/scripts/initialize_once.sh &")
+
+	-- Make DP-3 the XWayland primary so Wine/Proton games get correct mouse input there
+	hl.exec_cmd("sleep 3 && xrandr --output DP-3 --primary")
 end)
