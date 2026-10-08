@@ -58,3 +58,5 @@ modified = ' '
 staged = '[++\($count\)](green)'
 renamed = ' '
 deleted = ' '
+
+scan_timeout = 100

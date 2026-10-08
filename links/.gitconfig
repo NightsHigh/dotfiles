@@ -8,6 +8,7 @@
 
 [core]
 	editor = nvim
+	pager = cat
 
 [rebase]
     autoSquash = true       # Automatically squash commits with 'fixup!' or 'squash!' during rebase
