@@ -27,6 +27,9 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind("CONTROL + ALT + DELETE", hl.dsp.exec_cmd("missioncenter"))
 
+-- Lock screen (same guard as hypridle's lock_cmd so it never stacks two hyprlocks)
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("pidof hyprlock || hyprlock"))
+
 -- NOTE: your old config bound SUPER + B twice (firefox above AND launch-waybar
 -- below). Only one can win. Enable the one you want; left disabled to avoid a
 -- silent conflict.
@@ -53,8 +56,8 @@ hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURC
 hl.bind("PRINT", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | swappy -f -]]))
 
 -- Move focus with mainMod + vim keys
+-- (SUPER + l is used for the lock screen below, so there is no focus-right bind)
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
 

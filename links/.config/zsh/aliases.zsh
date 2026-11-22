@@ -81,3 +81,7 @@ alias searchdir="find . -type d -iname"
 alias searchf="find . -type f -iname"
 
 
+
+# === Games ===
+# Elden Ring: The Convergence mod via me3 (Steam must be running)
+alias convergence='(cd ~/Downloads/ConvergenceModEldenRing/ConvergenceER && ./me3/Linux/me3 launch --auto-detect -p "./me3/convergence.me3")'
